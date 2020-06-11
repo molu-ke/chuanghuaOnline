@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "确认订单",
+  "usingComponents": {
+    "xy-list": "/components/xy-list/list",
+    "xy-title": "/components/xy-title/index"
+  }
+}

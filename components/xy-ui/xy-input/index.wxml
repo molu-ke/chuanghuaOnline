@@ -1,0 +1,42 @@
+<!--pages/g-input/index.wxml-->
+<xy-form-item label="{{label}}" disabled="{{disabled}}" status="{{_status}}" statusMessage="{{_statusMessage}}">
+  <view class="input__container">
+    <view class="input__prepend" wx:if="{{prepend}}">
+      <slot name="prepend" class="slot"/>
+    </view>
+
+
+    <view class="input__wrapper">
+      <input name="{{id}}" value="{{_value}}"
+        class="input__element"
+        type="{{type}}" password="{{password}}"
+        placeholder="{{placeholder}}"
+        placeholder-class="input__placeholder"
+        disabled="{{disabled}}" maxlength="{{maxlength}}"
+        cursor-spacing="{{cursorSpacing}}"
+        focus="{{_focus}}" confirm-type="{{confirmType}}"
+        confirm-hold="{{confirmHold}}" cursor="{{cursor}}"
+        selection-start="{{selectionStart}}"
+        selection-end="{{selectionEnd}}"
+        adjust-position="{{adjustPosition}}"
+        bindinput="handleInput" bindfocus="handleFocus"
+        bindblur="handleBlur" bindconfirm="handleConfirm"
+      />
+
+      <view class="input__icon__container">
+        <!-- clear icon -->
+        <view class="input__icon input__icon--clear" hidden="{{!clearable || !value}}" catch:tap="handleTapClear">
+          <g-icon type="close-circle" size="36"/>
+        </view>
+        <!-- info icon -->
+        <view class="input__icon input__icon--{{icon}}" wx:if="{{icon}}" catch:tap="handleTapIcon">
+          <g-icon wx:if="{{icon === 'info'}}" type="info-o" size="36"/>
+        </view>
+      </view>
+    </view>
+
+    <view class="input__append" wx:if="{{append}}">
+      <slot name="append" class="slot"/>
+    </view>
+  </view>
+</xy-form-item>

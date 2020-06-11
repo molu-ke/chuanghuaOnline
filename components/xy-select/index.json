@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "xy-search": "/components/xy-search/index"
+  }
+}

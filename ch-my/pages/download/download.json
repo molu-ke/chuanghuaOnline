@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的缓存",
+  "usingComponents": {
+    "xy-title": "/components/xy-title/index",
+    "xy-button-group": "/components/xy-ui/xy-button-group/index"
+  }
+}

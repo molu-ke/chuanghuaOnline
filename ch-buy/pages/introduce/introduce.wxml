@@ -1,0 +1,36 @@
+<view class="banner">
+	<image src="/ch-buy/assets/123.png"></image>
+</view>
+
+<!-- <xy-tab list='{{list}}' num='{{currentIndex}}' type='tab' width='30%' bind:switchTab='switchTab'/> -->
+
+<view class="medium">
+	<view class='medium-title'>2020年会计初级职称通关宝典</view>
+	<view class="medium-give">
+		随送电子版本教辅资料+历年真题+录播课讲义+2020学习计划【分享新学员注册解锁课程】
+	</view>
+	<view class='medium-desc texthidden-2'>
+		基础差？没经验？看别人都拿到证书升职加薪了，自己还在为学习方法及如何学习苦恼？对啊18位初级名师在线教学
+	</view>
+	<view class='medium-price flex-cs'>
+		<view class="medium-price-wrapper flex"> <text class='medium-price-ico'>￥</text> 8888</view>
+		<view class="medium-price-buy"> 已有9321人购买 </view>
+	</view>
+</view>
+
+<view class='course'>
+	<xy-title text="课程介绍" placeholder="" />
+	<view class='course-wrapper'>
+		<block>
+			<image src="/ch-buy/assets/123.png"></image>
+			<image src="/ch-buy/assets/123.png"></image>
+			<image src="/ch-buy/assets/123.png"></image>
+			<image src="/ch-buy/assets/123.png"></image>
+			<image src="/ch-buy/assets/123.png"></image>
+			<image src="/ch-buy/assets/123.png"></image>
+		</block>
+	</view>
+</view>
+
+
+<xy-button-group primaryText="立即报名" fixed bindprimaryTap='deliveryProcess' />

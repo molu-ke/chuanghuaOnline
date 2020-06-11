@@ -1,0 +1,20 @@
+
+
+<view style="height:200rpx"></view>
+
+<xy-input id="name" placeholder="请输入手机号" type='digit' label="手机号" bind:change="inputPhone" />
+<view class='tips'>请未注册的用户点击"注册"</view>
+
+<view class="xy-Rule">
+	<xy-icon type="{{isOK?'confirm':'cancel'}}" bindtap="select" />
+	登录即代表您已同意<navigator url="/ch-login/pages/userProtocol/index">《用户协议》</navigator>
+</view>
+
+<xy-button-group primaryText="获取手机动态验证码" bindprimaryTap='deliveryProcess' />
+
+
+
+<view class='flex-cs login-method'>
+	<text  bindtap="jump">使用密码登录</text>
+	<text data-url="/ch-login/pages/register/register" bindtap="jump">注册</text>
+</view>

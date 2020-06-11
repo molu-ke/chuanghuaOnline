@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "题目",
+  "usingComponents": {
+    "xy-button-group": "/components/xy-ui/xy-button-group/index"
+  }
+}

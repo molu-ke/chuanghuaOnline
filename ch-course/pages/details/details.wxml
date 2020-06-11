@@ -1,0 +1,80 @@
+<view class='banner'>
+	<image class="banner-bg" src="http://sims-dev.oss-cn-shenzhen.aliyuncs.com/topic/25b0501a-5237-4f12-80ed-3c2816418c7f-topic.jpg" mode="widthFix"></image>
+	<view class='banner-function'>
+		<image src="/ch-course/assets/images/download.png" bindtap="pageJump" data-url="/ch-my/pages/download/download"></image>
+		<button class="icon" open-type="share">
+			<image src="/ch-course/assets/images/forward.png"></image>
+		</button>
+	</view>
+	<view class="banner-title texthidden">
+		金融学
+	</view>
+</view>
+
+<view class="tab">
+	<xy-tab list='{{list}}' num='{{currentIndex}}' type='tab' width='33.3%' bind:switchTab='switchTab' />
+</view>
+
+<view class='notice' wx:if="{{currentIndex==0}}">
+	<view class="notice-item borderbottom">
+		<view class='notice-item-content'>
+			因为特殊情况，本次培训延期到2020年6月31日
+		</view>
+		<view class="notice-item-time">
+			2020年5月27日13点55分
+		</view>
+	</view>
+	<view class="notice-item borderbottom">
+		<view class='notice-item-content'>
+			欢迎大家进入本次培训课程，希望大家能好好学习，天天向上，早日完成培训，获取好成绩
+		</view>
+		<view class="notice-item-time">
+			2020年3月27日8点55分
+		</view>
+	</view>
+</view>
+
+<block wx:elif="{{currentIndex==1}}">
+	<view class="courseware" wx:for="{{coursewareList}}" wx:key="title">
+		<view class="courseware-title flex-cs borderbottom" bindtap="open" data-index="{{index}}">
+			<text>{{item.title}}</text>
+			<image src="/assets/images/common/downArrow.png" wx:if="{{!openState[index]}}"></image>
+			<image src="/assets/images/common/upArrow.png"   wx:else></image>
+		</view>
+		<view class="courseware-content borderbottom" wx:if="{{openState[index]}}" >
+			<view class="courseware-content-model"  wx:key="title"
+            wx:for="{{item.unit}}" wx:for-item="unitItme" wx:for-index="unitIndex" >
+				<view class="courseware-content-title">{{unitItme.subTitle}}</view>
+				<view class="courseware-content-list flex-cs {{listItem.current && 'current' }}"  wx:key="subTitle"
+              wx:for="{{unitItme.list}}" wx:for-item="listItem" wx:for-index="listIndex">
+					<view class="flex-c" bindtap="pageJump" data-url="/pages/videoPlay/videoPlay">
+						<text class="ico">{{listItem.type}}</text>
+						<text>{{listItem.title}}</text>
+					</view>
+					<image src='/ch-course/assets/images/dow-ico.png'></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</block>
+
+<view class='assessment' wx:elif="{{currentIndex==2}}">
+	<view class="assessment-list borderbottom" bindtap="pageJump" data-url="/ch-course/pages/test/test">
+			<view class="assessment-list-title">终极考试：对本次培训的缩合测试</view>
+			<view class='assessment-list-state'>状态： <text>未开始</text> </view>
+			<view class="assessment-list-time">截止时间：2020年5月1日</view>
+			<view class="assessment-list-mark flex-cc">
+				<text class="greed">得分：未开始</text>
+				<text class="blue">总分：100分</text>
+			</view>
+	</view>
+		<view class="assessment-list borderbottom">
+			<view class="assessment-list-title">入门考试：对本次培训的摸底测试</view>
+			<view class='assessment-list-state'>状态： <text>未开始</text> </view>
+			<view class="assessment-list-time">截止时间：2020年5月1日</view>
+			<view class="assessment-list-mark flex-cc">
+				<text class="red">得分：85分</text>
+				<text class="blue">总分：100分</text>
+			</view>
+	</view>
+</view>

@@ -1,0 +1,31 @@
+
+
+<view class='avatar flex-cc'>
+  <view class='avatar-wrapper'>
+      <image src='/ch-my/assets/images/add.png'></image>
+      <view>上传头像</view>
+  </view>
+</view>
+
+<xy-input id="password" placeholder="请输入姓名" label="姓名"  
+         bind:change="inputPSW" />
+<xy-form-item label="绑定微信" disabled="{{false}}">
+   <view class='label flex-cc' >
+    <view class='flex-cc select-wrapper' data-id='1' bindtap='radioChange'>
+        <view class='radio flex-cc  {{select == 1 &&"select"}}'>
+          <text class='circle'></text>
+        </view>
+        <view>男</view>
+    </view>
+    <view class='flex-cc select-wrapper' data-id='0' bindtap='radioChange'>
+        <view class='radio flex-cc {{select == 0 &&"select"}}' >
+          <text class='circle'></text>
+        </view>
+        <view>女</view>
+    </view>
+  </view>
+</xy-form-item >
+
+<xy-picker id="dateA" label="出生日期" mode="date" value="{{formData.dateA}}" bind:change="handleChange" placeholder="请选择出生日期"/>
+
+  <xy-button-group  primaryText="确定并保存"  fixed  bindprimaryTap='saveEvent'/>

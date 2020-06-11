@@ -1,0 +1,2 @@
+<!--pages/g-image/index.wxml-->
+<image src="{{filePath}}" mode="{{mode}}" lazyLoad="{{lazyLoad}}" binderror="handleError" bindload="handleLoad" style="{{imageStyle}}" class="image-class" />

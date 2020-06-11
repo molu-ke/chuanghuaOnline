@@ -1,0 +1,77 @@
+.header{
+  padding:30rpx;
+  color:#333;
+  font-size:32rpx;
+}
+
+.header-scan{
+  text-align: center;
+  font-size:26rpx;
+}
+
+.header-scan image{
+  width:60rpx;
+  height:60rpx;
+}
+
+.login image{
+  width:500rpx;
+  height:40rpx;
+}
+
+.xy-Rule{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  margin-top: 18rpx;
+  margin-bottom: 88rpx;
+  color:#9B9B9B;
+}
+
+.xy-Rule navigator{
+  color:#1A43A9;
+}
+
+.login-method{
+  padding:0 30rpx;
+  color:rgba(153,153,153,1);
+  font-size:26rpx;
+}
+
+.thirdLogin {
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:16rpx;
+  margin:0 30rpx 0;
+  padding:0rpx 30rpx;
+  border-top:2rpx solid #ccc;
+  font-size:32rpx;
+}
+
+.thirdLogin-write{
+  position:absolute;
+  top:-26rpx;
+  left:205rpx;
+  width:300rpx;
+  text-align: center;
+  background:#fff;
+}
+
+.thirdLogin-content {
+  margin-top:38rpx;
+  text-align: center;
+}
+
+.thirdLogin image{
+  width:80rpx;
+  height:80rpx;
+}
+
+.psd_append image{
+  height: 54rpx;
+  width: 66rpx;
+  padding:15rpx;
+  box-sizing: border-box;
+}

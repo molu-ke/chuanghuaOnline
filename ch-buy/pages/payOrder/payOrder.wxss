@@ -1,0 +1,60 @@
+page{
+  background-color:rgb(245,245,245);
+  font-size: 32rpx;
+  color: #000000;
+}
+
+.header{
+  padding:40rpx 30rpx 30rpx;
+  background:#fff;
+}
+
+.header-name{
+  padding-bottom:24rpx;
+}
+
+.header-name text:first-child,.header-price   text:first-child{
+  flex:0 0 160rpx;
+}
+
+.header-price text:last-child{
+  color:#FF5F25;
+}
+
+.play{
+  margin-top:30rpx;
+  background:#fff;
+}
+
+.play-title{
+  padding:30rpx 40rpx;
+  font-weight:bold;
+  border-bottom:2rpx solid #EBEBEB;
+}
+
+.play-mode-item{
+  padding:40rpx;
+}
+
+.play-mode-item-left image{
+  width:60rpx;
+  height:60rpx;
+  margin-right:20rpx;
+}
+
+.play-mode-item-left-content{
+  font-size:30rpx;
+  
+}
+
+.play-mode-item-left-content view:last-child{
+  margin-top:6rpx;
+  font-size:26rpx;
+  color:#999;
+
+}
+
+.play-mode-item-right image{
+  width:40rpx;
+  height:40rpx;
+}

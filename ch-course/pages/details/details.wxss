@@ -1,0 +1,199 @@
+page{
+  font-size: 30rpx;
+}
+.banner{
+  position:relative;
+  width:100%;
+  overflow: hidden;
+  height:300rpx;
+}
+.banner-bg{
+  position:relative;
+  z-index:-1;
+  width:750rpx;
+}
+
+.banner-function{
+  position:absolute;
+  z-index:10;
+  top:0;
+  width:100%;
+}
+
+.banner-function .icon{
+  float:right;
+  background: none;
+  width:50rpx;
+  height:50rpx;
+  overflow:visible;
+  padding-left:0;
+  padding-right:0;
+
+}
+
+.banner-function image{
+  width:50rpx;
+  height:50rpx;
+  float:right;
+  margin-top:20rpx;
+  margin-right:35rpx;
+}
+
+.banner-title{
+  position:absolute;
+  bottom:28rpx;
+  width:100%;
+  font-weight:bold;
+  color:#fff;
+  padding:0 20rpx;
+}
+
+.tab{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: #ffffff;
+  height: 95rpx;
+}
+
+.notice-item {
+  padding:28rpx 30rpx;
+}
+
+.notice-item-content{
+  word-break: break-all;
+  font-size: 30rpx;
+}
+
+.notice-item-time{
+  color:#777;
+  font-size:30rpx;
+  margin-top:16rpx;
+}
+
+.courseware-title{
+  padding:26rpx 30rpx;
+  background-color: rgba(245,245,245,.5);
+}
+
+.courseware-title text{
+  padding-right:20rpx;
+  line-height: 50rpx;
+}
+
+.courseware-title image{
+  width:46rpx;
+  height:40rpx;
+}
+
+.courseware-content{
+  background:#fff;
+}
+
+.courseware-content{
+  margin:0 30rpx;
+  padding-bottom:20rpx;
+  font-size:30rpx;
+  color:#666666;
+}
+
+.courseware-content-title{
+  padding:28rpx 0 20rpx 0;
+  line-height: 45rpx;
+  font-size: 32rpx;
+}
+
+.courseware-content-list{
+  padding:20rpx 0;
+}
+
+.courseware-content-list .ico{
+  padding: 2rpx 6rpx;
+  color: #035FC2;
+  border: 2rpx solid #035FC2;
+  border-radius: 7rpx;
+  font-size: 20rpx;
+  background:rgba(3,95,194,.05);
+  margin-right:14rpx;
+  flex-shrink:0;
+}
+
+.courseware-content-list  image{
+  width: 38rpx;
+  height: 38rpx;
+  flex:0 0 38rpx;
+  margin-left: 20rpx;
+}
+
+.current{
+  color:#035FC2;
+}
+
+.current view .ico{
+  background:#035FC2;
+  color:#fff;
+}
+
+.assessment{
+  padding:20rpx 40rpx;
+}
+
+.assessment-list{
+  color: #000000;
+  font-size: 32rpx;
+  padding:20rpx 0 26rpx 0;
+}
+
+
+
+.assessment-list-title{
+  font-weight: bold;
+}
+
+.assessment-list-state{
+  margin-top:15rpx;
+}
+
+.assessment-list-state text{
+  color:#035FC2;
+}
+
+.assessment-list-time{
+  color: #7a6666;
+  font-size: 28rpx;
+  margin-top: 14rpx;
+}
+
+.assessment-list-mark{
+  margin-top: 22rpx;
+}
+
+.assessment-list-mark text{
+  display: inline-block;
+  text-align: center;
+  font-size: 24rpx;
+  border: 1rpx solid rgba(179,216,255,1);
+  border-radius: 10rpx;
+  padding:8rpx 20rpx;
+}
+
+.assessment-list-mark text:first-child{
+  margin-right: 60rpx;
+}
+
+.assessment-list-mark text.blue{
+  border-color: rgba(179,216,255,1);
+  color: #409EFF;
+  background-color: rgba(236,245,255,1);
+}
+.assessment-list-mark text.red{
+  border-color: rgba(251,196,196,1);
+  color: #F56C6C;
+  background-color: rgba(254,240,240,1);
+}
+.assessment-list-mark text.greed{
+  border-color: rgba(194,231,176,1);
+  color: #67C23A;
+  background-color: rgba(240,249,235,1);
+}

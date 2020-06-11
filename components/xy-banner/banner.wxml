@@ -1,0 +1,27 @@
+<view class="banner-view">
+  <view class="container">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{bannerConfig.indicatorDots}}"
+        indicator-color="{{bannerConfig.indicatorColor}}"
+        indicator-active-color="{{bannerConfig.indicatorActiveColor}}"
+        autoplay="{{bannerConfig.autoplay}}" interval="{{bannerConfig.interval}}" duration="{{bannerConfig.duration}}"
+        bindchange="change"
+        >
+        <block wx:for="{{bannerList}}" wx:key="index">
+          <swiper-item bindtap="bannerClick" data-item="{{item}}">
+            <image class="bannerImage" src="{{item.picUrl}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="indicator">
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <text class="text {{_index == index ? 'active' : ''}}"></text>
+      </block>
+    </view>
+    <view class="topic-detail-icon" wx:if="{{topicTitle}}">
+      <text>专题职位</text>
+      <image src="/assets/images/common/right_fff.png"/>
+    </view>
+  </view>
+</view>

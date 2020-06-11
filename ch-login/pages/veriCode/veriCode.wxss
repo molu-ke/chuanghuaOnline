@@ -1,0 +1,60 @@
+page{
+  padding:0 50rpx;
+  color:rgba(153,153,153,1);
+  font-size:34rpx;
+  box-sizing: border-box;
+}
+
+.card-title {
+  color: #000;
+  font-size: 50rpx;
+  line-height: 88rpx;
+  text-align: left;
+  padding:20rpx 0 36rpx 0rpx;
+  font-weight:bold;
+}
+
+.item{
+  line-height:54rpx;
+}
+
+.code{
+  margin-top:120rpx;
+}
+
+.code-again{
+  text-align: right;
+}
+
+.code-again text{
+  display:inline-block;
+  color:#1A43A9;
+  border:2rpx solid #1A43A9;
+  border-radius:30rpx;
+  font-size:22rpx;
+  padding:8rpx 18rpx;
+  margin-bottom:30rpx;
+}
+
+.content{
+
+}
+.iptbox{
+  width: 80rpx;
+  height: 80rpx;
+  border:2rpx solid rgb(153,153,153);
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.ipt{
+  width: 0;
+  height: 0;
+}
+.btn-area{
+  width: 80%;
+  background-color: orange;
+  color:white;
+}

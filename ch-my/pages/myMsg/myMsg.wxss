@@ -1,0 +1,56 @@
+.avatar{
+ padding:70rpx 0 10rpx;
+}
+
+.avatar-wrapper{
+  width:170rpx;
+  height:170rpx;
+  border-radius: 50%;
+  border:2rpx solid #B0B0B0;
+  text-align: center;
+}
+
+.avatar-wrapper image{
+  width:60rpx;
+  height:60rpx;
+  padding-top: 50rpx;
+}
+
+.avatar-wrapper view{
+  font-size:22rpx;
+  color:#666;
+}
+
+
+/* -------------- 单选样式 ------------------ */
+.label .select-wrapper{
+  width:50%;
+  font-size:34rpx;
+}
+.radio {
+  width:26rpx;
+  height:26rpx;
+  margin-right:18rpx;
+  border-radius:50%;
+  background:#fff;
+  border:2rpx solid #B0B0B0;
+  transition:all 0.3s linear;
+  transform:translateY(3rpx);
+}
+
+.radio .circle {
+  width:0rpx;
+  height:0rpx;
+  border-radius:50%;
+  background:#035FC2;
+  transition:all 0.3s linear;
+}
+
+.select{
+  border:2rpx solid #035FC2;
+}
+
+.select .circle{
+  width:14rpx;
+  height:14rpx;
+}

@@ -1,0 +1,54 @@
+
+<xy-input id="name" placeholder="请输入手机号" type='digit' label="手机号(必填)" bind:change="inputPhone" />
+
+ <xy-input id="weight" label="验证码(必填)" value="{{code}}"  bind:change="inputCode" 
+      placeholder="请输入验证码"  append type='digit'>
+    <view slot="append" class='append'>
+      <text wx:if="{{ !msgBtnState }}" bindtap="getMsg" class="msg-btn">发送验证码</text>
+      <text wx:else class="msg-btn">已发送{{dowmNum}}s</text>
+    </view>
+  </xy-input>
+
+<xy-input id="password" type="password"  placeholder="请输入登录密码" label="设置密码(必填)"  bind:change="inputPSW" append>
+   <view slot="append" class='append psd_append' bindtap="changePassword">
+        <image src='{{showPassword?"/ch-login/assets/images/psd-on.png":"/ch-login/assets/images/psd-off.png"}}'></image>
+      </view>
+</xy-input>
+<view class='tips'>请输入8-24位(数字+字母)的密码</view>
+
+<xy-input id="password" type="password" placeholder="请再次输入登录密码" label="确认密码(必填)"  bind:change="inputPSW" />
+
+<xy-form-item label="绑定微信" disabled="{{false}}">
+   <view class='label flex-cc' >
+    <view class='flex-cc select-wrapper' data-id='1' bindtap='radioChange'>
+        <view class='radio flex-cc  {{select == 1 &&"select"}}'>
+          <text class='circle'></text>
+        </view>
+        <view>是</view>
+    </view>
+    <view class='flex-cc select-wrapper' data-id='0' bindtap='radioChange'>
+        <view class='radio flex-cc {{select == 0 &&"select"}}' >
+          <text class='circle'></text>
+        </view>
+        <view>否</view>
+    </view>
+  </view>
+</xy-form-item >
+<view class='tips'>强烈推荐绑定微信，绑定可享受更多便利服务</view>
+
+
+<xy-input id="password" type="password" placeholder="请输入推荐人账号(选填)" label="推荐人" bind:change="inputPSW" append>
+    <view slot="append" class='append scan_append' bindtap="changePassword">
+        <image src='/ch-login/assets/images/scan.png'></image>
+      </view>
+</xy-input>
+
+<view class='tips'>请输入推荐人帐户或通过扫推荐人个人二维码获取推荐人账户</view>
+
+ <view class="xy-Rule">
+    <xy-icon type="{{isOK?'confirm':'cancel'}}"  bindtap="select"/>
+    我同意<navigator url="/ch-login/pages/userProtocol/index">《用户协议》</navigator>
+  </view>
+
+  <xy-button-group  primaryText="注册"   bindprimaryTap='register'/>
+

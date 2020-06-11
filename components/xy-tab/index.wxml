@@ -1,0 +1,30 @@
+<!--components/recruit-tab/index.wxml-->
+
+
+<view class='tab flex-cs {{setHeight?"setHeight":""}}' wx:if='{{type=="tab"}}'>
+  <block wx:for='{{list}}' wx:key='key'>
+  <view class='tab-item {{num==index?"active":""}} ' style='width:{{width}};' data-index='{{index}}' bindtap="switchTab">{{item.title}}
+    <view class='tips' wx:if='{{item.status==1}}'></view>
+  
+  </view>
+  </block>
+</view>
+
+<!-- 招聘频道的tab -->
+<view class='tab flex channel-tab' wx:elif='{{type=="channel"}}'>
+  <block wx:for='{{list}}' wx:key='key'>
+      <view class='tab-item {{num==index?"active":""}}' style='width:{{width}};' data-index='{{index}}' bindtap="switchTab">{{item.title}}</view>
+  </block>
+  <slot />
+</view>
+
+
+<view class='recruit-select flex-cs {{list.length>3?"":"recruit-select-type1"}}' wx:else>
+  <block wx:for='{{list}}' wx:key='key'>
+    <view class='item flex-cs' data-index='{{index}}' bindtap="switchTab">
+      <text class='{{num==index?"active":""}}'>{{item.text}}</text>    
+      <image class='item-icon' wx:if='{{num==index}}' src='/assets/recruit-images/picker-blue.png'></image>
+      <image class='item-icon' wx:else src='/assets/recruit-images/picker-grey.png'></image>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,49 @@
+<!-- pages/g-button-group/index.wxml -->
+
+<!-- type==1 用于处理textarea层级问题  2 用于筛选部分  -->
+  <block wx:if="{{buttonList.length === 0}}">
+
+    <cover-view class="button-group {{fixed ? 'button-group--fixed' : ''}}" wx:if='{{type=="coverView"}}'>
+      <cover-view class="button-group__agree" wx:if="{{agree}}">
+        <!-- <g-agree catch:change="handleAgreeChange" value="{{_agreeChecked}}">
+        <slot name="agree" />
+      </g-agree> -->
+        <slot name="agreement" />
+      </cover-view>
+      <cover-view class="button-area">
+        <button class='second-text-bg' wx:if="{{secondText}}" disabled="{{secondDisabled}}" catch:tap="handleSecondTap">{{secondText}}</button>
+        <button style="background:#{{color}}" wx:if="{{primaryText}}" disabled="{{agree && !_agreeChecked || disabled}}" catch:tap="handlePrimaryTap" type="primary">
+          <cover-view>{{primaryText}}</cover-view>
+        </button>
+
+      </cover-view>
+    </cover-view>
+    <view class="button-group {{fixed ? 'button-group--fixed' : ''}}" wx:if='{{type=="view"}}'>
+      <view class="button-group__agree" wx:if="{{agree}}">
+        <!-- <g-agree catch:change="handleAgreeChange" value="{{_agreeChecked}}">
+        <slot name="agree" />
+      </g-agree> -->
+        <slot name="agreement" />
+      </view>
+      <view class="button-area">
+        <button  class='second-text-bg' wx:if="{{secondText}}" disabled="{{secondDisabled}}" catch:tap="handleSecondTap">{{secondText}}</button>
+        <button  style="background:#{{color}}" wx:if="{{primaryText}}" disabled="{{agree && !_agreeChecked || disabled}}" catch:tap="handlePrimaryTap" type="primary">
+          <view>{{primaryText}}</view>
+        </button>
+
+      </view>
+    </view>
+  </block>
+  <block wx:if="{{buttonList.length > 0}}">
+    <cover-view class="button-list" wx:if='{{type=="coverView"}}'>
+      <cover-view class="button-list__item" id="{{index}}" hover-class="button-list__item--hover" wx:for="{{buttonList}}" wx:key="{{index}}" catch:tap="handelButtonListTap" data-item="{{item}}">
+        <cover-view class="button-list__text">{{item.text}}</cover-view>
+      </cover-view>
+    </cover-view>
+
+    <view class="button-list" wx:if='{{type=="view"}}'>
+      <view class="button-list__item" id="{{index}}" hover-class="button-list__item--hover" wx:for="{{buttonList}}" wx:key="{{index}}" catch:tap="handelButtonListTap" data-item="{{item}}">
+        <view  class="button-list__text">{{item.text}}</view>
+      </view>
+    </view>
+  </block>

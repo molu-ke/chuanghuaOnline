@@ -1,0 +1,74 @@
+page{
+  padding:0;
+}
+
+.banner {
+  width: 100%;
+  height: 300rpx;
+  padding: 30rpx 0;
+}
+
+.banner image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+
+}
+
+.medium{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #ebebeb;
+}
+
+.medium-title{
+  color: #000000;
+  font-size: 42rpx;
+  font-weight: bold;
+}
+
+.medium-give{
+  margin-top: 20rpx;
+  color:#3072F6;
+  font-size: 32rpx;
+}
+
+.medium-desc{
+  margin-top: 16rpx;
+  font-size: 26rpx;
+  color: #666666;
+  line-height: 40rpx;
+}
+
+.medium-price{
+  margin-top: 18rpx;
+}
+
+.medium-price-wrapper{
+  color: #F9533D;
+  font-size: 32rpx;
+  font-weight: bold;
+  
+}
+
+.medium-price-ico{
+  color: #F9533D;
+  font-size: 18rpx;
+  position: relative;
+  bottom: -13rpx;
+  font-weight: 100;
+}
+
+.medium-price-buy{
+  color: #999999;
+  font-size: 28rpx;
+  padding-left:24rpx;
+  border-left:2rpx solid #ccc;
+}
+
+.course image{
+  width:100%;
+}
+
+.course-wrapper{
+  margin:20rpx 30rpx 180rpx;
+}

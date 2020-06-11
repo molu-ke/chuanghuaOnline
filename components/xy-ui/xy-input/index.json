@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "xy-form-item": "../xy-form-item/index",
+    "xy-icon": "../xy-icon/index"
+  }
+}

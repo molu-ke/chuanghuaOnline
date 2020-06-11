@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+      "xy-banner": "/components/xy-banner/banner",
+      "xy-list": "/components/xy-list/list"
+    }
+}  

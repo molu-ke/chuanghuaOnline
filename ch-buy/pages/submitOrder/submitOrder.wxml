@@ -1,0 +1,18 @@
+ <xy-title text="课程信息" placeholder="" />
+  
+  <view class='content'>
+    <block wx:for="{{dataList}}" wx:key="index">
+      <xy-list  list="{{item}}" data-type="skill" data-id="{{item.id}}"  type="2" bindtap="educationClick"/>
+    </block>
+  </view>
+
+  <view class="submit flex-c">
+    <view class='submit-price flex-cc'>
+      实付金额 
+      <text class='submit-price-ico'>￥</text>
+      <text class='submit-price-text'>120</text>
+    </view>
+    <view class='submit-orider flex-cc' bindtap="submitOrider">
+      提交订单
+    </view>
+  </view>

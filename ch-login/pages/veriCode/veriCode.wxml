@@ -1,0 +1,17 @@
+<view style="height:2rpx;background:#f5f5f5"></view>
+<view class="card-title">请输入您收到的验证码</view>
+<view class='item'>验证码已成功发送至</view>
+<view class='item'>13900000000</view>
+
+<view class='code'>
+  <view class='code-again'>
+    <text>重新获取验证码</text>
+  </view>
+  <view class='content flex-cs'>
+    <block wx:for="{{Length}}" wx:key="item">
+      <input class='iptbox' value="{{Value.length>=index+1?Value[index]:''}}" disabled password='{{ispassword}}' catchtap='Tap'></input>
+    </block>
+  </view>
+  
+  <input name="password" password="{{true}}" class='ipt' maxlength="{{Length}}" focus="{{isFocus}}" bindinput="Focus"></input>
+</view>

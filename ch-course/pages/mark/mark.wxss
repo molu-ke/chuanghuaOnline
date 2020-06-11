@@ -1,0 +1,86 @@
+.mark{
+  padding:30rpx 30rpx;
+  border-bottom:30rpx solid #f2f2f2;
+}
+.mark-get{
+  color: #000000;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.mark-get text{
+  color: #666666;
+  font-size: 26rpx;
+}
+
+.mark-time{
+  margin-top: 16rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.mark-tips{
+  margin-top:30rpx;
+}
+
+.mark-tips-left {
+  position:relative;
+}
+
+.mark-tips-left image{
+  width:100rpx;
+  height:100rpx;
+}
+
+.mark-tips-left text{
+  position:absolute;
+  bottom:0;
+  left:0;
+  font-size:22rpx;
+  width:100%;
+  color:#fff;
+  text-align: center;
+  padding:4rpx 0;
+  background:rgba(0,0,0,.6);
+}
+
+.mark-tops-right{
+  font-size: 28rpx;
+  background:#f4f4f4;
+  border-radius:8rpx;
+  padding:14rpx 14rpx;
+  height:86rpx;
+  color:#666;
+}
+
+.mark-tops-right text{
+  color:orange;
+
+}
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 14rpx solid transparent;
+  border-right: 14rpx solid #f4f4f4;
+  border-bottom: 14rpx solid transparent;
+  border-left: 14rpx solid transparent;
+}
+
+.subject{
+  padding:20rpx 30rpx 170rpx;
+}
+
+.subject-list{
+  font-size:32rpx;
+  word-break:break-all;
+  padding: 27rpx 0;
+  border-bottom: 2rpx solid #EBEBEB;
+
+}
+
+.subject-list image{
+  width:46rpx;
+  height:46rpx;
+  margin-right:20rpx;
+}

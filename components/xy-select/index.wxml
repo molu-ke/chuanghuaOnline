@@ -1,0 +1,28 @@
+<!-- 筛选 -->
+<view class="select-box select {{component-class}}" style='left:{{isActive == 1 && "0%"}}'>
+	<view class='search'>
+		 <xy-search  placeholder="请输入专业关键字" bind:search="searchClick" />
+	</view>
+	<view class='scroll-wrapper flex'>
+		<scroll-view scroll-y class='scroll-item'>
+		<view wx:for='{{_industry}}' wx:key="key" data-code="{{item.code}}" data-index='{{index}}'
+					bindtap='selectIndustry' class='{{userSelect.industry == item.code ?"on":"" }}'>
+			{{item.message}}
+		</view>
+	</scroll-view>
+	<scroll-view scroll-y class='scroll-view'>
+		<view class='select-content'>
+			<view class='wrapper' wx:for="{{_category}}" wx:key="index">
+				<view class='sub-title select-title'>{{item.title}}</view>
+				<ul class='content'>
+					<li wx:for="{{item.list}}" wx:for-index="subIndex" wx:for-item="subItem"  wx:key="key" 
+					    data-code="{{subItem.code}}"  class='{{userSelect.category == subItem.code ?"on":"" }}' 
+						  bindtap='select'  data-index="{{subIndex}}">
+						{{subItem.message}}
+					</li>
+				</ul>
+			</view>
+		</view>
+	</scroll-view>
+	</view>
+</view>

@@ -1,0 +1,29 @@
+<view class='mark'>
+  <view class="mark-get">练习得分为86分！<text>(总分100分)</text> </view>
+  <view class="mark-time">本次测试的交时间为：2020-05-29 20:22:11</view>
+  <view class="mark-tips flex-cc">
+    <view class="mark-tips-left">
+      <image src="/assets/images/admin-avart.png"></image>
+      <text>主讲老师</text>
+    </view>
+    <view class='triangle'></view>
+    <view class="mark-tops-right">
+        <text>提交截止时间已过。</text>
+        你可以作为自我学习进行测验，但提交的结果将不再计分哦
+    </view>
+  </view>
+</view>
+
+<view class="subject">
+  <view class="subject-list flex-c" wx:for="{{list}}" :key="index">
+    <image wx:if="{{item.result}}" src="/ch-course/assets/images/wrong-ico.png"></image>
+    <image wx:else src="/ch-course/assets/images/yes-ico.png"></image>
+    <text>{{item.choices}}、{{item.optionDTOS}}</text>
+  </view>
+</view>
+
+ <xy-button-group
+      primary-text="查看答案解析"
+      bind:primaryTap="handlePrimaryTap" 
+      fixed
+    ></xy-button-group>

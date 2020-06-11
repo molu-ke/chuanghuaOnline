@@ -1,0 +1,53 @@
+page{
+  background:#000;
+  height:100%;
+  font-size:32rpx;
+  /* background:rgb(245,245,245) */
+}
+
+.player{
+  width:100%;
+  position:absolute;
+  top:50%;
+  transform: translateY(-68%);
+}
+
+.operate{
+  position:absolute;
+  top:50%;
+  transform: translateY(-68%);
+  width:100%;
+  background:rgba(29,29,29,.5);
+  color:#fff;
+  padding:38rpx 40rpx;
+  box-sizing:border-box;
+}
+
+.operate-wrapper {
+  padding:38rpx 0;
+}
+
+.linear{
+  border-top: 1rpx solid rgba(220,220,220,.8);
+  border-bottom: 1rpx solid rgba(220,220,220,.8);
+}
+
+.operate-title{
+  width:230rpx;
+}
+
+.operate-btn cover-view{
+  margin-right:54rpx;
+}
+
+.select{
+  color:rgb(4,192,2);
+}
+
+.setUp{
+  position:absolute;
+  bottom:50rpx;
+  right:40rpx;
+  width:60rpx;
+  height:60rpx;
+}

@@ -1,0 +1,76 @@
+.input {
+  padding-top: 36rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.input__label {
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+
+.input__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+input.input__element {
+  font-size: 34rpx;
+  line-height: 48rpx;
+  height: 48rpx;
+  min-height: 48rpx;
+  max-height: 48rpx;
+  flex: 1;
+}
+
+.input__placeholder {
+  color: #cccccc;
+  font-size: 34rpx;
+  line-height: 48rpx;
+}
+
+.input__prepend {
+  font-size: 34rpx;
+  line-height: 48rpx;
+  position: relative;
+  padding-right: 20rpx;
+  margin-right: 20rpx;
+  border-right: 2rpx solid #cccccc;
+  max-width: 120rpx;
+  overflow: hidden;
+}
+
+.input__append {
+  margin-left: 20rpx;
+  overflow: hidden;
+}
+
+.input__icon__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.input__icon {
+  margin-left: 30rpx;
+}
+
+.input__icon--info {
+  color: #4293f4;
+}
+
+.input__icon--clear {
+  color: #cccccc;
+}

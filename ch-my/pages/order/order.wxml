@@ -1,0 +1,11 @@
+<xy-tab list='{{list}}' num='{{currentIndex}}' type='tab' width='25%' bind:switchTab='switchTab' />
+
+<view class='content'>
+	<block wx:for="{{dataList}}" wx:key="index">
+			<view class="content-wrapper-order">
+				<text>2020-02-25 23:12</text>
+				<text>订单号：1217243407</text>
+			</view>
+			<xy-list list="{{item}}" data-type="skill" data-id="{{item.id}}" type="2" bindtap="educationClick" />
+	</block>
+</view>

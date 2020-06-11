@@ -1,0 +1,103 @@
+page{
+  font-size: 30rpx;
+}
+.courseware{
+  margin-bottom:170rpx;
+}
+
+.courseware-title{
+  padding:26rpx 30rpx;
+  background-color: rgba(245,245,245,.5);
+}
+
+.courseware-title text{
+  padding-right:20rpx;
+  line-height: 50rpx;
+}
+
+.courseware-title image{
+  width:46rpx;
+  height:40rpx;
+}
+
+.courseware-content{
+  background:#fff;
+}
+
+.courseware-content{
+  margin:0 30rpx;
+  padding-bottom:20rpx;
+  font-size:30rpx;
+  color:#666666;
+}
+
+.courseware-content-title{
+  padding:28rpx 0 20rpx 0;
+  line-height: 45rpx;
+  font-size: 32rpx;
+}
+
+.courseware-content-list{
+  padding:20rpx 0;
+}
+
+.courseware-content-list .ico{
+  padding: 2rpx 6rpx;
+  color: #035FC2;
+  border: 2rpx solid #035FC2;
+  border-radius: 7rpx;
+  font-size: 20rpx;
+  background:rgba(3,95,194,.05);
+  margin-right:14rpx;
+  flex-shrink:0;
+}
+
+.courseware-content-list>text{
+  flex:0 0 38rpx;
+  margin-left: 20rpx;
+  font-size:26rpx;
+}
+
+.current{
+  color:#035FC2;
+}
+
+.current view .ico{
+  background:#035FC2;
+  color:#fff;
+}
+
+.edit{
+  position:absolute;
+  right:0;
+  color:#035FC2;
+  
+}
+
+.radio {
+  width:26rpx;
+  height:26rpx;
+  margin-right:18rpx;
+  border-radius:50%;
+  background:#fff;
+  border:2rpx solid #B0B0B0;
+  transition:all 0.3s linear;
+  transform:translateY(3rpx);
+}
+
+.radio .circle {
+  width:0rpx;
+  height:0rpx;
+  border-radius:50%;
+  background:#035FC2;
+  transition:all 0.3s linear;
+}
+
+.select{
+  border:2rpx solid #035FC2;
+}
+
+.select .circle{
+  width:14rpx;
+  height:14rpx;
+}

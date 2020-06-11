@@ -1,0 +1,27 @@
+.textarea__element {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  width: 100%;
+  display: block;
+}
+
+.textarea__placeholder {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #cccccc;
+}
+
+.textarea__element--disabled {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.textarea__wrapper {
+  /* height: 144rpx; */
+  position: relative;
+}
+
+.textarea--ios {
+  position: absolute;
+  margin-top: -10rpx;
+  margin-left: -10rpx;
+}

@@ -1,0 +1,5 @@
+<view class="{{type==1?'form-title':'form-title2'}}">
+   <view>{{text}}</view>
+   <view>{{placeholder}}</view>
+   <slot/>
+</view>

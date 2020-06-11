@@ -1,0 +1,32 @@
+	<xy-title text="已完成下载" placeholder="">
+		<text class="edit" bindtap="editEvent">{{editState?'编辑':'取消'}}</text>
+	</xy-title>
+
+
+	<view class="courseware" wx:for="{{coursewareList}}" wx:key="title">
+		<view class="courseware-title flex-cs borderbottom" bindtap="open" data-index="{{index}}">
+			<text>{{item.title}}</text>
+			<image src="/assets/images/common/downArrow.png" wx:if="{{!openState[index]}}"></image>
+			<image src="/assets/images/common/upArrow.png" wx:else></image>
+		</view>
+		<view class="courseware-content borderbottom" wx:if="{{openState[index]}}">
+			<view class="courseware-content-model" wx:key="title" wx:for="{{item.unit}}" wx:for-item="unitItme" wx:for-index="unitIndex">
+				<view class="courseware-content-title">{{unitItme.subTitle}}</view>
+				<view class="courseware-content-list flex-cs {{listItem.current && 'current' }}" wx:key="subTitle" 
+              wx:for="{{unitItme.list}}" wx:for-item="listItem" wx:for-index="listIndex">
+					<view class="flex-c" bindtap="pageJump">
+						<view class='radio flex-cc {{listItem.select?"select":""}}' hidden="{{editState}}"
+                   catchtap="selectEvent"  data-index="{{index}}"  data-unitindex="{{unitIndex}}"  data-listindex="{{listIndex}}">
+							<text class='circle'></text>
+						</view>
+						<text class="ico">{{listItem.type}}</text>
+						<text>{{listItem.title}}</text>
+					</view>
+					<text>148.8M</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+	<xy-button-group primary-text="全选" second-text="删除" bind:primaryTap="handlePrimaryTap" bind:secondTap="handleSecondTap" fixed wx:if="{{!editState}}"></xy-button-group>

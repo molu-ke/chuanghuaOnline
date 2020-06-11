@@ -1,0 +1,19 @@
+.content{
+  padding:0 30rpx;
+}
+
+.content-wrapper{
+  position: relative;
+}
+
+.content-wrapper-order{
+  line-height: 40rpx;
+  transform: translateY(16rpx);
+  color: #666666;
+  font-size: 28rpx;
+  background: #fff;
+  margin-left:6rpx;
+}
+.content-wrapper-order text:first-child{
+  margin-right:30rpx;
+}

@@ -1,0 +1,37 @@
+.content{
+  padding:0 30rpx;
+  color:#000000;
+}
+
+.submit{
+  position:fixed;
+  left:0;
+  bottom:0;
+  right:0;
+  height:100rpx;
+  box-shadow:0px 2rpx 15rpx 2rpx rgba(155,155,155,0.23);
+}
+
+.submit-price{
+  width:60%;
+  height:100%;
+}
+
+.submit-price-ico{
+  color: #F9533D;
+  position: relative;
+  bottom: -3rpx;
+  right: -6rpx;
+}
+
+.submit-price-text{
+  color: #F9533D;
+  font-weight: bold;
+}
+
+.submit-orider{
+  width:40%;
+  height:100%;
+  color:#fff;
+  background:rgb(254,138,25);
+}

@@ -1,0 +1,83 @@
+/* components/recruit-tab/index.wxss */
+@import '/app.wxss';
+.recruit-select{
+  height: 96rpx;
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 32rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #333;
+}
+.recruit-select-type1{
+  padding:0 68rpx;
+}
+.recruit-select .item .item-icon{
+  width: 15rpx;
+  height: 9rpx;
+  margin-left: 10rpx;
+}
+.active{
+  color: #035FC2;
+}
+
+
+.tab{
+  border-bottom: 1rpx solid rgba(235,235,235,0.8);
+  background-color: #fff;
+}
+.tab-item{
+  text-align: center;
+  height: 96rpx;
+  line-height: 96rpx;
+  position: relative;
+  font-size: 30rpx;
+  color: #666666;
+}
+.tab-item.active{
+  color: #000000;
+}
+.tab-item.active::after{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width:40rpx;
+  height:4rpx;
+  background:#035FC2;
+}
+
+.channel-tab{
+  position:relative;
+  padding:0 30rpx;
+}
+.channel-tab .tab-item.active::after{
+  width:142rpx;
+}
+.channel-tab .tab-item{
+  margin-right: 90rpx;
+}
+
+.setHeight{
+  border:none;
+}
+.setHeight .tab-item{
+  height: 83rpx;
+  line-height: 83rpx;
+  
+}
+
+.tips{
+  position: absolute;
+  top: 27rpx;
+  right: 49rpx;
+  background-color: red;
+
+width: 13rpx;
+height: 13rpx;
+border: 2rpx solid #EBEBEB;
+border-radius: 50%;
+background: #EE5855;
+
+}

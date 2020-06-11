@@ -1,0 +1,12 @@
+<view class='status'>
+    <image src='/ch-login/assets/images/success.png'></image>
+    <view class='item1'>你好,15986734008用户</view>
+    <view class='item1'>已注册成功</view>
+</view>
+
+ <xy-button-group
+      primary-text="进入小程序"
+      second-text="完善个人信息"
+      bind:primaryTap="handlePrimaryTap" bind:secondTap="handleSecondTap"
+      fixed
+    ></xy-button-group>

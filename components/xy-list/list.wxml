@@ -1,0 +1,27 @@
+<view class="education-list-view">
+  <view class="container skill">
+    <view class="education-logo">
+      <image class='education-logo__image' src="{{list.pic}}"/>
+    </view>
+    <view class="content-box" wx:if="{{type == 1}}">
+      <view class="content-box-top texthidden"> {{list.skillName}} </view>
+      <view class='content-box-type'> 培训类型：{{list.techTypeName}} </view>
+      <view class="company-location texthidden-2"> 培训介绍：{{list.highlightLabel}} </view>
+      <view class="content-box-bottom">
+        <view class="price">
+          有效时间:{{list.time}}
+        </view>
+      </view>
+    </view>
+     <view class="content-box" wx:elif="{{type == 2}}">
+      <view class="content-box-top texthidden-2"> {{list.skillName}} </view>
+      <view class="content-box-bottom">
+        <view class="price2">
+            <text class="price-icon">￥</text>
+            <text class="price-text">{{list.discountPrice}}</text>
+            <text class="original">￥{{list.originalPrice}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

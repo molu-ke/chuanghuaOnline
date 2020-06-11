@@ -1,0 +1,34 @@
+<view class='my-top'>
+  <image class='my-bg' src='/assets/images/my-bg.png'></image>
+
+  <view class='my-top__top flex-cs'>
+    <view class='my-top__top-left flex'>
+      <image src="/assets/images/admin-avart.png"></image>
+      <view class='my-top__top-left__info'>
+        <view>晓明</view>
+        <view>15986934995</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='my-top__bottom flex-csa'>
+    <navigator class='my-top__bottom-item flex-c' hover-class="none" url='/ch-my/pages/myMsg/myMsg' >
+      <view class='tips' wx:if='{{ noReadCount.typeSystem && noReadCount.typeSystem != 0 }}'></view>
+      <image src='/assets/images/my-01.png'></image>
+      个人信息
+    </navigator>
+    <navigator class='my-top__bottom-item flex-c' url='/ch-my/pages/order/order'>
+      <view class='tips' wx:if='{{noReadCount.typeApply && noReadCount.typeApply != 0 }}'></view>
+      <image src='/assets/images/my-02.png'></image>
+      订单管理
+    </navigator>
+    <navigator class='my-top__bottom-item flex-c' hover-class="none" url='/ch-my/pages/download/download' >
+      <view class='tips' wx:if='{{noReadCount.typeNotice && noReadCount.typeNotice != 0 }}'></view>
+      <image src='/assets/images/my-03.png' style="height:52rpx;width:52rpx;margin-bottom:11rpx;"></image>
+      我的缓存
+    </navigator>
+  </view>
+
+</view>
+
+<xy-button-group class="position" primaryText="退出登录" bindprimaryTap='deliveryProcess' />

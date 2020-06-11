@@ -1,0 +1,56 @@
+@import '/components/xy-ui/static/style/main';
+.detail{
+  padding: 26rpx;
+}
+.title{
+  font-size: 34rpx;
+  font-weight: bold;
+  color: #2E2E2E;
+  line-height: 48rpx;
+  position: relative;
+  padding-left:20rpx;
+}
+.title::before{
+  position: absolute;
+  left: 0;
+  content:"";
+  display:inline-block;
+  width:8rpx;
+  height:30rpx;
+  transform:translateY(12rpx);
+  background:#4187F3;
+}
+.info{
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+  font-size: 28rpx;
+  color: #666666;
+  padding: 26rpx 0;
+  /* border-bottom: 1px solid #eef3fb; */
+  border-bottom:1px solid #e4e4e4
+}
+.word{
+  color: #2E2E2E;
+  font-size: 30rpx;
+  line-height: 58rpx;
+  padding-top: 5px;
+  text-align: justify;
+  /* display: flex;
+  flex-direction: column;
+  width: 100%; */
+}
+
+
+.word ul li{
+  display:block;
+}
+
+.word ul li p{
+  display:block;
+}
+
+.word ul .sub-title{
+  font-size:34rpx;
+  font-weight: 600;
+  padding:10rpx 0;
+}

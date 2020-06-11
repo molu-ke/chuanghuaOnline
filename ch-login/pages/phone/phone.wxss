@@ -1,0 +1,25 @@
+.xy-Rule{
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 40rpx;
+  margin-top: 18rpx;
+  margin-bottom: 88rpx;
+  color:#9B9B9B;
+}
+
+.xy-Rule navigator{
+  color:#1A43A9;
+}
+
+.login-method{
+  padding:0 30rpx;
+  color:rgba(153,153,153,1);
+  font-size:26rpx;
+}
+
+.tips{
+  font-size:26rpx;
+  color: #035FC2;
+  margin:8rpx 0rpx 0rpx 38rpx; 
+}

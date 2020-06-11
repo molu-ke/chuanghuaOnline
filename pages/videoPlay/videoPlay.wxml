@@ -1,0 +1,30 @@
+
+
+<video id="videoplayer" class='player' src="https://sims-dev.oss-cn-shenzhen.aliyuncs.com/topicVideos/3d1725c5-1220-4fe5-8ada-6c9869b39109-topicVideo.mp4" autoplay="{{true}}" bindtimeupdate="videoUpdate"></video>
+
+<cover-view class="operate" wx:if="{{showOperate}}">
+  <cover-view class="operate-wrapper flex-c">
+      <cover-view class="operate-title">视频连播</cover-view>
+      <cover-view>
+        <switch checked="{{switch1Checked}}" bindchange="switch1Change"/>
+      </cover-view>
+  </cover-view>
+  <cover-view class="operate-wrapper  linear flex-c">
+    <cover-view class="operate-title">清晰度</cover-view>
+    <cover-view class="operate-btn flex">
+      <cover-view class='select'>流畅</cover-view>
+      <cover-view>高清</cover-view>
+    </cover-view>
+  </cover-view>
+   <cover-view class="operate-wrapper flex-c">
+    <cover-view class="operate-title">速度</cover-view>
+    <cover-view class="operate-btn flex">
+      <cover-view class='select'>1X</cover-view>
+      <cover-view>1.25X</cover-view>
+      <cover-view>1.5X</cover-view>
+      <cover-view>2X</cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>
+
+<image class="setUp" src='/assets/images/setUp.png' bindtap="isOperate"></image>

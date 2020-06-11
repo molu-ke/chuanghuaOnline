@@ -1,0 +1,19 @@
+<!--components/recruit-search/index.wxml-->
+
+<view class='recruit-search flex-cs'>
+  <view class='recruit-search-left flex-c'>
+    <image class="ico-search" src='/assets/images/common/search.png'></image>
+    <text></text>
+    <input type="text" class="recruit-search-input"
+      value="{{ inputVal }}"
+      placeholder="{{placeholder}}"
+      maxlength="{{maxlength}}"
+      placeholder-class="recruit-search-input-placeholder"
+      confirm-type="{{confirmType}}"
+      bindinput="onChange"
+      bindconfirm="search"
+      />
+  </view>
+  <text class='recruit-search-btn' bindtap='search' >搜索</text>
+</view>
+

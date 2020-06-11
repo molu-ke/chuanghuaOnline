@@ -1,0 +1,12 @@
+
+  <xy-select bindhandleSelect="screen" isActive="{{isActive}}"/>
+
+   <xy-title text="我的培训和测试" placeholder="">
+    <image class='screen' bindtap="screen" src='/assets/images/common/screen.png'></image>
+   </xy-title>
+
+  <view class="list">
+    <block wx:for="{{dataList}}" wx:key="index">
+      <xy-list  list="{{item}}" data-type="skill" data-id="{{item.id}}" bindtap="pageJump"/>
+    </block>
+  </view>

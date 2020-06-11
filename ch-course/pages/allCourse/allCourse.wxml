@@ -1,0 +1,9 @@
+
+<xy-tab list='{{list}}' num='{{currentIndex}}' type='tab' width='50%' bind:switchTab='switchTab'/>
+  
+<!-- 列表 -->
+<view class="list">
+  <block wx:for="{{dataList}}" wx:key="index">
+    <xy-list  list="{{item}}" data-type="skill" data-id="{{item.id}}" bindtap="listEvent"/>
+  </block>
+</view>

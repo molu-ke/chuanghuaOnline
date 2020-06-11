@@ -1,0 +1,95 @@
+page{
+  padding-bottom:40rpx;
+  background:#F7F7F7;
+  font-size:28rpx;
+  color:#333;
+}
+
+.list{
+  background:#fff;
+}
+
+.lisr .ask{
+  width:100%;
+}
+
+.list .number{
+  width:80rpx;
+  height:80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  font-size:3r2px;
+  color:#fff;
+  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABQCAMAAAC5zwKfAAAAQlBMVEVMaXEhf/8dfP8gf/8ScP8ff/8gf/8gf/8gfv8gf/8gev8gfv8ffP8gfv8ff/8gf/8hfv8gfv8fgP8gfv8ff/8hf/9+Ddw8AAAAFXRSTlMA8h7jBE/1z/zBEmUzrz2dW6ZshnYxtUFBAAAA3ElEQVR42u3Mt3HEMAAAwYMjABqQfNN/qx98JkUaXYgtYHnLZjjDGc5whjOUNDtc7DDYYbLDaofdDm87fNrhZofDDlc5TMjhYYcvOxxyGLIcHsjhJodtlcOOHG5yuKxyeCKHuxx25LDIYc1yWHDDihwOOTxwwxDl8IEb9uyGIeKGF2544oY1u2GKqGHYUcNW+EH4xLBd/CJ8WhgKaph21LBG1PDMmGG4wAx7xAzDI2OGdwQxrAPEsBYQw14yXricO2CFrW8rWGE4vpsSpuM1MvC/sC0h1X4/t7HyVx/S68x3zRMbLgAAAABJRU5ErkJggg==') no-repeat;
+  background-size:100%;
+}
+
+.list .title{
+   width:556rpx;
+   margin:16rpx 0rpx 16rpx 14rpx;
+   font-size:32rpx;
+   word-break:break-all;
+}
+
+.list .title .type{
+  display:inline-block;
+  color:#035FC2;
+  font-size: 22rpx;
+  border:2rpx solid #035FC2;
+  border-radius:8rpx;
+  text-align: center;
+  padding:2rpx 10rpx;
+  transform: translateY(-3rpx);
+}
+
+.list .title .star{
+  color:red;
+}
+
+.list .tips{
+  float:right;
+  width:70rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  color:#999;
+  font-size:28rpx;
+  text-align: right;
+}
+
+.list .item .item-select{
+  padding:27rpx 0;
+  margin-left:36rpx;
+  margin-right: 6rpx;
+  border-bottom:2rpx solid #EBEBEB;
+  word-break:break-all;
+}
+
+/* -------------- 单选样式 ------------------ */
+.radio {
+  width:32rpx;
+  height:32rpx;
+  flex:0 0 32rpx;
+  margin-right:26rpx;
+  border-radius:50%;
+  background:#fff;
+  border:2rpx solid #B0B0B0;
+  transition:all 0.3s linear;
+  transform:translateY(3rpx);
+}
+
+.radio .circle {
+  width:0rpx;
+  height:0rpx;
+}
+
+.select .circle{
+  width:32rpx;
+  height:32rpx;
+}
+
+.list-analysis{
+  color:orange;
+  font-size:28rpx;
+  background: #F7F7F7;
+  padding:23rpx 30rpx 170rpx;
+}

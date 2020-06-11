@@ -1,0 +1,20 @@
+<!--pages/g-textarea/index.wxml-->
+<xy-form-item label="{{label}}" disabled="{{disabled}}" status="{{_status}}" statusMessage="{{_statusMessage}}" catch:tap="handleTap" class='component-class'>
+  <view class="textarea__wrapper">
+    <textarea class="textarea__element textarea--{{_platform}} {{disabled ? 'textarea__element--disabled' : ''}}" value="{{_value}}" 
+      placeholder="{{placeholder}}" 
+      disabled="{{disabled}}" maxlength="{{maxlength}}" 
+      auto-focus="{{autoFocus}}" focus="{{_focus}}" 
+      style="height: {{height}}" 
+      auto-height="{{autoHeight}}"
+      style="height: 144rpx;"
+      cursor="{{cursor}}" show-confirm-bar="{{showConfirmBar}}" 
+      cursor-spacing="{{cursorSpacing}}"
+      selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" 
+      adjust-position="{{adjustPosition}}" 
+      bindinput="handleInput" bindfocus="handleFocus" 
+      bindblur="handleBlur" bindconfirm="handleConfirm" 
+      placeholder-class="textarea__placeholder" 
+    />
+  </view>
+</xy-form-item>

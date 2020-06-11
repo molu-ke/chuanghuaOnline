@@ -1,0 +1,97 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/course/course",
+    "pages/my/my",
+    "pages/videoPlay/videoPlay"
+  ],
+  "subPackages": [
+    {
+      "root": "ch-login",
+      "name": "ch-login",
+      "independent": false,
+      "pages": [
+        "pages/login/login",
+        "pages/register/register",
+        "pages/regSuccess/regSuccess",
+        "pages/phone/phone",
+        "pages/veriCode/veriCode",
+        "pages/bindWechat/bindWechat",
+        "pages/userProtocol/index"
+      ]
+    },
+    {
+      "root": "ch-my",
+      "name": "ch-my",
+      "independent": false,
+      "pages": [
+        "pages/myMsg/myMsg",
+        "pages/download/download",
+        "pages/order/order"
+      ]
+    },
+    {
+      "root": "ch-course",
+      "name": "ch-course",
+      "independent": false,
+      "pages": [
+        "pages/allCourse/allCourse",
+        "pages/details/details",
+        "pages/test/test",
+        "pages/subject/subject",
+        "pages/mark/mark"
+      ]
+    },
+    {
+      "root": "ch-buy",
+      "name": "ch-buy",
+      "independent": false,
+      "pages": [
+        "pages/introduce/introduce",
+        "pages/submitOrder/submitOrder",
+        "pages/payOrder/payOrder"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "ch-login"
+      ]
+    }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/assets/images/index-on.png",
+        "selectedIconPath": "/assets/images/index-off.png"
+      },
+      {
+        "pagePath": "pages/course/course",
+        "text": "我的课程",
+        "iconPath": "/assets/images/course-on.png",
+        "selectedIconPath": "/assets/images/course-off.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "个人中心",
+        "iconPath": "/assets/images/my-on.png",
+        "selectedIconPath": "/assets/images/my-off.png"
+      }
+    ],
+    "borderStyle": "black",
+    "color": "#838383",
+    "selectedColor": "#2552ac",
+    "backgroundColor": "#fff"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "创华在线学习平台",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

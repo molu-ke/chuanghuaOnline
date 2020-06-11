@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "xy-button-group": "/components/xy-ui/xy-button-group/index"
+  }
+}

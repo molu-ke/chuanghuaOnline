@@ -1,0 +1,33 @@
+.picker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.picker__value {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  flex: 1;
+}
+
+.picker__value--placeholder {
+  color: #cccccc;
+}
+
+.picker__value--disabled {
+  color: #000000;
+}
+
+.picker__action {
+  font-size: 36rpx;
+  line-height: 48rpx;
+  color: #035FC2;
+}
+
+.dropdown {
+  max-width: 90rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

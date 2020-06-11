@@ -1,0 +1,14 @@
+<view class='line'></view>
+<view class="card-title">请输入绑定的账号</view>
+<view class="card-title card-subTitle">您的微信尚未绑定账号，请先绑定后登陆</view>
+
+
+<xy-input id="name" placeholder="请输入手机号" type='digit' label="手机号" bind:change="inputPhone" />
+
+<view class='button-wrapper'> 
+  <xy-button-group primaryText="获取动态验证码绑定微信" bindprimaryTap='deliveryProcess' />
+</view>
+
+<view class='flex-cc login-method'>
+	尚未注册的用户请先注册后再绑定微信 <navigator url="/ch-login/pages/register/register">去注册 ></navigator>
+</view>

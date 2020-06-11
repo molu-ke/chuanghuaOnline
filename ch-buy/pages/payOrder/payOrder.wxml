@@ -1,0 +1,30 @@
+<view class='header'>
+  <view class='header-name flex'>
+      <text>商品名称： </text>
+      <text>2020会计初级职称通关宝典 </text>
+  </view>
+  <view class='header-price flex'>
+    <text>应付金额：</text>
+    <text>￥199</text> 
+  </view>
+</view>
+
+<view class='play'>
+  <view class='play-title'>选择支付方式：</view>
+  <view class='play-mode'>
+    <view class='play-mode-item flex-cs'>
+      <view class='play-mode-item-left flex-c'>
+        <image src="/ch-buy/assets/images/wxPay.png"></image>
+        <view class='play-mode-item-left-content'>
+          <view>微信支付</view>
+          <view>打开微信支付</view>
+        </view>
+      </view>
+      <view class='play-mode-item-right'>
+          <image src="/ch-buy/assets/images/select.png"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<xy-button-group primaryText="确认支付" fixed  color="FF5F25" bindprimaryTap='playEvent' />

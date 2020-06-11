@@ -1,0 +1,56 @@
+.banner{
+  position:relative;
+  width:100%;
+  overflow: hidden;
+  height:300rpx;
+}
+
+.banner-bg{
+  width:750rpx;
+}
+
+.content{
+  padding:40rpx 40rpx 0;
+}
+
+.content-title{
+  color: #000;
+  font-size: 50rpx;
+  line-height: 88rpx;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-explain{
+  font-size: 32rpx;
+  line-height: 60rpx;
+  margin-bottom:43rpx;
+}
+
+.content-subject{
+  padding:30rpx 0;
+  font-size: 32rpx;
+  border-top: 2rpx solid rgba(235,235,235,0.8);
+  border-bottom: 2rpx solid rgba(235,235,235,0.8);
+}
+
+.content-subject view:nth-last-child(2){
+  padding:26rpx 0;
+}
+
+.content-subject view text:first-child{
+  display:inline-block;
+  width:178rpx;
+}
+
+.content-subject view text:last-child{
+  color: #999999;
+
+}
+
+.content-tips{
+  padding:20rpx 0 50rpx 0;
+  text-align: center;
+  font-size:26rpx;
+  color:#035FC2;
+}

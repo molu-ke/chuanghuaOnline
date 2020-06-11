@@ -1,0 +1,103 @@
+/* mainPack/pages/education/list/list.wxss */
+.texthidden{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.texthidden-2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.education-list-view{
+  padding: 30rpx 0 20rpx;
+  border-bottom: 1rpx solid #EBEBEB;
+}
+.education-list-view .container{
+  display: flex;
+}
+.container .education-logo{
+  margin-right: 25rpx;
+}
+.container .education-logo .education-logo__image{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1rpx solid #E3E3E3;
+  object-fit: contain;
+  border-radius: 10rpx;
+}
+.container.skill .education-logo .education-logo__image{
+  width: 210rpx;
+  height: 150rpx;
+}
+.content-box{
+  flex: 1;
+}
+.content-box-top{
+  color: #000000;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+.content-box-type{
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 12rpx;
+
+}
+.eduction .name{
+  max-width: 300rpx;
+}
+.content-box .location{
+  color: #666666;
+  font-size: 28rpx;
+  margin-top: 15rpx;
+}
+.content-box .company-location{
+  margin-top:8rpx;
+  font-size: 26rpx;
+  color: #999999;
+}
+
+.content-box-bottom{
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price{
+  display: flex;
+  align-items: center;
+  color: #F9533D;
+  font-size: 30rpx;
+}
+
+.price2{
+  display: flex;
+  color: #F9533D;
+  font-size: 32rpx;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.price2 .price-icon{
+  color: #F9533D;
+  font-size: 18rpx;
+  position: relative;
+  bottom: -3rpx;
+}
+
+.price2 .price-text{
+  font-weight: bold;
+}
+
+.price2 .original{
+  color: #aaaaaa;
+  font-size: 20rpx;
+  text-decoration: line-through;
+  margin-left: 22rpx;
+  margin-top: 9rpx;
+}

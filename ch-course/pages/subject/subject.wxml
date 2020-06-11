@@ -1,0 +1,41 @@
+  <view class='list' wx:for='{{questionList}}' wx:key='key' wx:if="{{current == index}}">
+    <view class='ask flex'>
+      <view class='number'>{{item.serialNumber}}</view>
+      <view class='title'>
+        <text class="type"> {{ item.type == 1 ? '单选':'多选' }} </text>
+        {{item.title}}
+        <text class="star" wx:if='{{item.must}}'>*</text>
+      </view>
+      <view class='tips'>(5分)</view>
+    </view>
+
+    <!-- 单选  type = 1   多选  type = 2-->
+    <view class='item' wx:if='{{item.type == 1 || item.type == 2 }}'> 
+      <view class='item-select flex' wx:for='{{item.optionDTOS}}' 
+            wx:key='key'  wx:for-index="idx" wx:for-item="subitem"
+            bindtap='selectClick' data-index='{{index}}'  data-idx="{{idx}}"
+            data-type='{{item.type}}'>
+        <view class='radio flex-cc {{subitem.checked ? "select":""}}'>
+          <image class='circle' src='../../assets/images/tick.png'></image>
+        </view>
+        <block wx:if='{{!subitem.hasOther}}'>
+          {{subitem.content}}
+        </block>        
+      </view>
+    </view>
+
+    <!-- 解析 -->
+    <view class="list-analysis" wx:if="{{isAnalysis}}">
+      正确答案：D  你没选择任何选项
+    </view>
+  </view>
+
+ <xy-button-group
+      primary-text="{{btnWrite}}"
+      second-text="上一题"
+      bind:primaryTap="handlePrimaryTap" 
+      bind:secondTap="handleSecondTap"
+      fixed
+    ></xy-button-group>
+
+

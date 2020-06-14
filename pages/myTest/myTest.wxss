@@ -1,0 +1,12 @@
+.list{
+  padding:0 30rpx;
+  border-top: 1rpx solid rgba(235,235,235,1);
+}
+
+.screen{
+  position:absolute;
+  width:44rpx;
+  height:44rpx;
+  right:0;
+  padding-left:30rpx;
+}

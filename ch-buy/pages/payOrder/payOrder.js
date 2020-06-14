@@ -1,18 +1,15 @@
-// ch-buy/pages/payOrder/payOrder.js
+const app = getApp();
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    id:'',
+    details:[]
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+    this.data.id = options.id;
+    this.getData();
   },
 
   /**
@@ -22,29 +19,29 @@ Page({
 
   },
 
+  getData(){
+    let data = app.$mock.details.data[this.data.id];
+    console.log(data)
+    this.setData({
+      details:data
+    })
+  },
+
   playEvent(){
-    wx.$showToast('支付成功');
+    wx.$showToast('购买成功');
+
+    let res = app.$mock.buyCourse.some( item => item.id === this.data.id);
+    if(!res){
+      let data = app.$mock.trainList.data.find( item => item.id == this.data.id);
+      app.$mock.buyCourse.push(data)
+    }
+
     setTimeout(()=>{
       wx.switchTab({
         url: '/pages/course/course',
       })
     },2000)
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */

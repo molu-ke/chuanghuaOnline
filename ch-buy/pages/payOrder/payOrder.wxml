@@ -1,11 +1,11 @@
 <view class='header'>
   <view class='header-name flex'>
       <text>商品名称： </text>
-      <text>2020会计初级职称通关宝典 </text>
+      <text>{{details.skillName}} </text>
   </view>
   <view class='header-price flex'>
     <text>应付金额：</text>
-    <text>￥199</text> 
+    <text>￥{{details.discountPrice}}</text> 
   </view>
 </view>
 

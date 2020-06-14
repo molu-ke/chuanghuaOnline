@@ -32,10 +32,11 @@
   width: 210rpx;
   height: 150rpx;
 }
-.content-box{
+/* .content-box{
   flex: 1;
-}
+} */
 .content-box-top{
+  width:470rpx;
   color: #000000;
   font-size: 32rpx;
   font-weight: bold;

@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "xy-list": "/components/xy-list/list",
+    "xy-title": "/components/xy-title/index",
+    "xy-select": "/components/xy-select/index"
+  }
+}

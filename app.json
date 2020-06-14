@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/index",
     "pages/course/course",
+    "pages/myTest/myTest",
     "pages/my/my",
     "pages/videoPlay/videoPlay"
   ],
@@ -72,6 +73,12 @@
       {
         "pagePath": "pages/course/course",
         "text": "我的课程",
+        "iconPath": "/assets/images/course-on.png",
+        "selectedIconPath": "/assets/images/course-off.png"
+      },
+      {
+        "pagePath": "pages/myTest/myTest",
+        "text": "我的测试",
         "iconPath": "/assets/images/course-on.png",
         "selectedIconPath": "/assets/images/course-off.png"
       },

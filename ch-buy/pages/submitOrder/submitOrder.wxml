@@ -10,7 +10,7 @@
     <view class='submit-price flex-cc'>
       实付金额 
       <text class='submit-price-ico'>￥</text>
-      <text class='submit-price-text'>120</text>
+      <text class='submit-price-text'>8888</text>
     </view>
     <view class='submit-orider flex-cc' bindtap="submitOrider">
       提交订单

@@ -4,16 +4,36 @@
  <view class="list" >
   <!-- 导航 -->
   <view class="list-tab flex-cs">
-    <view class="list-tab_left" bindtap="text">当前培训和测试</view>
-    <navigator class="list-tab_right" url="/ch-course/pages/allCourse/allCourse">
+    <view class="list-tab_left" bindtap="text">当前培训</view>
+    <navigator class="list-tab_right" url="/ch-course/pages/allCourse/allCourse?type=1">
       查看更多
       <image src="/assets/images/common/right.png"></image>
     </navigator>
   </view>
   <!-- 列表 -->
   <view>
-    <block wx:for="{{dataList}}" wx:key="index">
-      <xy-list  list="{{item}}" data-type="skill" data-id="{{item.id}}" bindtap="educationClick"/>
+    <block wx:for="{{trainList}}" wx:key="index">
+      <xy-list  list="{{item}}" data-item="{{item}}" bindtap="trainEvent"/>
+    </block>
+  </view>
+
+ </view>
+
+<view class="online"></view>
+
+ <view class="list" >
+  <!-- 导航 -->
+  <view class="list-tab flex-cs">
+    <view class="list-tab_left" bindtap="text">当前测试</view>
+    <navigator class="list-tab_right" url="/ch-course/pages/allCourse/allCourse?type=2">
+      查看更多
+      <image src="/assets/images/common/right.png"></image>
+    </navigator>
+  </view>
+  <!-- 列表 -->
+  <view>
+    <block wx:for="{{testList}}" wx:key="index">
+      <xy-list  list="{{item}}" data-item="{{item}}" bindtap="testEvent"/>
     </block>
   </view>
 

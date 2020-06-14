@@ -1,4 +1,4 @@
 const store={
-  token:''
+  token:'',
 }
 module.exports = store;

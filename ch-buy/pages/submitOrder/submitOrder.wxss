@@ -20,7 +20,7 @@
 .submit-price-ico{
   color: #F9533D;
   position: relative;
-  bottom: -3rpx;
+  bottom: 1rpx;
   right: -6rpx;
 }
 

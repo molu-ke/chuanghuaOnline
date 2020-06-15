@@ -1,0 +1,17 @@
+/* components/myComp/noData/noData.wxss */
+
+.notHas {
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+.notHas image{
+  display: block;
+  height: 391rpx;
+  width: 374rpx;
+  margin:0 auto 0;
+}
+.notHas view{
+  font-size: 32rpx;
+  color: #666666;
+  text-align: center;
+}

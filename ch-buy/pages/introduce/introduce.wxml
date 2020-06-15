@@ -18,7 +18,7 @@
 	<xy-title text="课程介绍" placeholder="" />
 	<view class='course-wrapper'>
 		<block>
-			<image wx:for="{{details.imgList}}" src="{{item}}" wx:keu="key" mode="widthFix"></image>
+			<image wx:for="{{details.imgList}}" src="{{item}}" wx:key="key" mode="widthFix"></image>
 		</block>
 	</view>
 </view>

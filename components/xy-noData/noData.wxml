@@ -1,0 +1,5 @@
+<!--components/myComp/noData/noData.wxml-->
+<view class='notHas' wx:if='{{show}}' style='padding-top:{{paddingTop}}rpx'>
+  <image  src='/assets/images/common/notHas.png'></image>
+  <view>{{title}}</view>
+</view>

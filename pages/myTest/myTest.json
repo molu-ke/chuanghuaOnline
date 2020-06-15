@@ -2,6 +2,7 @@
   "usingComponents": {
     "xy-list": "/components/xy-list/list",
     "xy-title": "/components/xy-title/index",
+    "xy-noData": "/components/xy-noData/noData",
     "xy-select": "/components/xy-select/index"
   }
 }

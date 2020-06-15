@@ -48,7 +48,6 @@ page{
 
 .list .tips{
   float:right;
-  width:70rpx;
   height:80rpx;
   line-height: 80rpx;
   color:#999;

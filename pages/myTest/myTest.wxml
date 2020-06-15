@@ -10,3 +10,5 @@
       <xy-list  list="{{item}}" data-type="skill" data-id="{{item.id}}" bindtap="pageJump"/>
     </block>
   </view>
+
+  <xy-noData wx:if="{{dataList.length == 0}}"/>

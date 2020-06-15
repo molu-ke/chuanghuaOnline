@@ -6,7 +6,7 @@
         {{item.title}}
         <text class="star" wx:if='{{item.must}}'>*</text>
       </view>
-      <view class='tips'>(5分)</view>
+      <view class='tips'>({{item.number}}分)</view>
     </view>
 
     <!-- 单选  type = 1   多选  type = 2-->
@@ -26,7 +26,7 @@
 
     <!-- 解析 -->
     <view class="list-analysis" wx:if="{{isAnalysis}}">
-      正确答案：D  你没选择任何选项
+      正确答案：{{item.answer}}  {{item.explain}}
     </view>
   </view>
 

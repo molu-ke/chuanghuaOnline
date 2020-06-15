@@ -1,122 +1,28 @@
-// ch-course/pages/subject/subject.js
+const app = getApp();
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
+
   data: {
-    questionList: [{
-        ctime: "2020-06-08 19:45:56",
-        id: "277",
-        memo: "",
-        must: true,
-        optionDTOS: [{
-            checked: false,
-            choices: "1",
-            content: "A、18 ",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "565",
-            otherContent: "",
-            questionId: "277",
-            status: true,
-            utime: ""
-          },
-          {
-            checked: false,
-            choices: "2",
-            content: "B、19",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "566",
-            otherContent: "",
-            questionId: "277",
-            status: true,
-            utime: ""
-          },
-          {
-            checked: false,
-            choices: "3",
-            content: "C、20",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "567",
-            otherContent: "",
-            questionId: "277",
-            status: true,
-            utime: "",
-          }
-        ],
-        questionnaireId: "124",
-        serialNumber: 1,
-        status: true,
-        title: "您的年龄",
-        type: 1,
-        utime: "",
-      },
-      {
-        ctime: "2020-06-08 19:45:56",
-        id: "279",
-        memo: "",
-        must: true,
-        optionDTOS: [{
-            checked: false,
-            choices: "1",
-            content: "A、50以下",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "572",
-            otherContent: "",
-            questionId: "279",
-            status: true,
-            utime: ""
-          },
-          {
-            checked: false,
-            choices: "2",
-            content: "B、50~200",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "573",
-            otherContent: "",
-            questionId: "279",
-            status: true,
-            utime: ""
-          },
-          {
-            checked: false,
-            choices: "3",
-            content: "C、200以上",
-            ctime: "2020-06-08 19:45:56",
-            hasOther: false,
-            id: "574",
-            otherContent: "",
-            questionId: "279",
-            status: true,
-            utime: ""
-          },
-        ],
-        questionnaireId: "124",
-        serialNumber: 2,
-        status: true,
-        title: "您每月用于零食及校外饮食的费用为",
-        type: 2,
-        utime: ""
-      }
-    ],
+    questionList:[],
     current: 0,
     btnWrite: '下一题',
     isAnalysis: false, // 是否显示解释
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function(options) {
-    this.setTitle();
     this.setData({
-      isAnalysis: options.isAnalysis
+      isAnalysis: options.isAnalysis?true:false
     })
+    this.getData();
+  },
+
+  getData(){
+    console.log(app.$mock.questionList)
+    this.setData({
+      questionList:app.$mock.questionList.data
+    })
+    this.setTitle();
   },
 
   // 用户选择事件
@@ -124,11 +30,7 @@ Page({
 
     if (this.data.isAnalysis) return;
 
-    let {
-      index,
-      idx,
-      type
-    } = e.currentTarget.dataset,
+    let { index, idx, type } = e.currentTarget.dataset,
       list = this.data.questionList[index].optionDTOS
     console.log(index)
     // 单选
@@ -146,6 +48,7 @@ Page({
     this.setData({
       questionList: this.data.questionList
     })
+    console.log(this.data.questionList)
   },
 
   // 上一题

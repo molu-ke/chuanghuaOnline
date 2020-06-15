@@ -8,7 +8,7 @@
 	<view class="content-subject">
 		<view>
 			<text>题目数量</text>
-			<text>20道题</text>
+			<text>8道题</text>
 		</view>
 		<view>
 			<text>提交次数</text>
@@ -16,7 +16,7 @@
 		</view>
 		<view>
 			<text>截止时间</text>
-			<text>2020-03-01  23:30</text>
+			<text>2020-83-01  23:30</text>
 		</view>
 	</view>
 	<view class="content-tips">截止提交后可以进入查看答案和解析</view>

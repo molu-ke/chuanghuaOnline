@@ -1,5 +1,5 @@
 <view class='mark'>
-  <view class="mark-get">练习得分为86分！<text>(总分100分)</text> </view>
+  <view class="mark-get">练习得分为{{total}}分！<text>(总分100分)</text> </view>
   <view class="mark-time">本次测试的交时间为：2020-05-29 20:22:11</view>
   <view class="mark-tips flex-cc">
     <view class="mark-tips-left">
@@ -16,9 +16,9 @@
 
 <view class="subject">
   <view class="subject-list flex-c" wx:for="{{list}}" :key="index">
-    <image wx:if="{{item.result}}" src="/ch-course/assets/images/wrong-ico.png"></image>
+    <image wx:if="{{!item.result}}" src="/ch-course/assets/images/wrong-ico.png"></image>
     <image wx:else src="/ch-course/assets/images/yes-ico.png"></image>
-    <text>{{item.choices}}、{{item.optionDTOS}}</text>
+    <text>{{item.serialNumber}}、{{item.title}}</text>
   </view>
 </view>
 

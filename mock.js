@@ -317,7 +317,7 @@ exports.questionList = {
       questionnaireId: "124",
       serialNumber: 5,
       status: true,
-      title: "．下列项目中，()是连接会计凭证和会计报表的中间环节。",
+      title: "下列项目中，()是连接会计凭证和会计报表的中间环节。",
       type: 1,
       answer: "C",
       explain: "会计账簿是由具有一定格式、相互联结的账页组成，以会计凭证为依据，全面、连续、系统地记录各项经济业务的簿籍。设置和登记账簿是连接会计凭证",
@@ -513,8 +513,7 @@ exports.questionList = {
       status: true,
       title: "投资性房地产进行初始计量时，下列处理方法中正确的有",
       type: 2,
-      answer: ['B','C','D'
-      ],
+      answer: ['B','C','D'],
       explain: "无论采用公允价值模式还是成本模式进行后续计量的投资性房地产，均应按照取得成本进行初始计量，选项A不正确。",
       number:16
     }
@@ -633,3 +632,6 @@ exports.details = {
 
 // 已购买课程
 exports.buyCourse = [ ];
+
+// 已完成测试
+exports.finishTest = [];

@@ -55,12 +55,14 @@ Page({
     } else {
       optionDTOS[idx].checked = !optionDTOS[idx].checked;
       // 判断是否有选择
-      questionItem.notFinished = optionDTOS.some( item => item.checked )
+      questionItem.userAnswer = [];
+      optionDTOS.forEach( (item,index) =>  {
+        item.checked && (questionItem.userAnswer.push( map[index] ) )
+      })
     }
     this.setData({
       questionList: this.data.questionList
     })
-    console.log(this.data.questionList)
   },
 
   // 上一题
@@ -117,29 +119,59 @@ Page({
     let { questionList } =  this.data;
 
     // 先判断用户是否有未回完题目
-    let res = questionList.some( item =>  !item.notFinished );
+    let res = questionList.some( item => {
+       if( item.type == 1 ) {
+        return !item.userAnswer
+       } else if( item.type == 2 ){
+         return !item.userAnswer || !item.userAnswer.length
+       }
+    });
 
     // 判断用户答案是否正确
+    let total = 0;
     questionList.forEach( item => {
+      if(item.type == 1){
+        item.result = item.answer === item.userAnswer
+      } else {
+        item.result = item.answer.join('') === item.userAnswer.join('')
+      }
+      item.result && (total+=item.number)
       
     })
 
-    wx.showModal({
-      title: '提示',
-      content: '你还有题目没有完成，是否确认提交？',
-      cancelText: "继续完成",
-      confirmText: "现在提交",
-      success(res) {
-        if (res.confirm) {
-         
-        } else if (res.cancel) {
-          console.log('用户点击取消')
+    app.$mock.finishTest =  this.data.questionList;
+    if(res){
+      wx.showModal({
+        title: '提示',
+        content: '你还有题目没有完成，是否确认提交？',
+        cancelText: "继续完成",
+        confirmText: "现在提交",
+        success(res) {
+          if (res.confirm) {
+            wx.redirectTo({
+              url: '/ch-course/pages/mark/mark?total='+total,
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
         }
-      }
-    })
-
-    // wx.redirectTo({
-    //   url: '/ch-course/pages/mark/mark',
-    // })
+      })
+    } else {
+      wx.showModal({
+        title: '提示',
+        content: '是否确定提交？',
+        cancelText: "检查",
+        confirmText: "提交",
+        success(res) {
+          if (res.confirm) {
+            wx.redirectTo({
+              url: '/ch-course/pages/mark/mark?total='+total,
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
+      })
+    }
   }
 })

@@ -8,6 +8,13 @@ Page({
     current: 0,
     btnWrite: '下一题',
     isAnalysis: false, // 是否显示解释
+    map :{
+      "0":"A",
+      "1":"B",
+      "2":"C",
+      "3":"D",
+      "4":"E",
+    }
   },
 
   onLoad: function(options) {
@@ -31,19 +38,24 @@ Page({
     if (this.data.isAnalysis) return;
 
     let { index, idx, type } = e.currentTarget.dataset,
-      list = this.data.questionList[index].optionDTOS
-    console.log(index)
+         questionItem = this.data.questionList[index],
+         optionDTOS = questionItem.optionDTOS,
+         map = this.data.map;
     // 单选
     if (type == 1) {
       // 清空选择
-      list.forEach(item => {
+      optionDTOS.forEach(item => {
         item.checked = false
       })
       // 选中
-      list[idx].checked = true
-      // 多选 
+      optionDTOS[idx].checked = true;
+      // 用户选择了
+      questionItem.userAnswer = map[idx];
+    // 多选 
     } else {
-      list[idx].checked = !list[idx].checked
+      optionDTOS[idx].checked = !optionDTOS[idx].checked;
+      // 判断是否有选择
+      questionItem.notFinished = optionDTOS.some( item => item.checked )
     }
     this.setData({
       questionList: this.data.questionList
@@ -64,22 +76,11 @@ Page({
   // 下一题
   handlePrimaryTap() {
     if (this.data.current + 1 == this.data.questionList.length) {
-      if (this.data.isAnalysis) return;
-      wx.showModal({
-        title: '提示',
-        content: '你还有题目没有完成，是否确认提交？',
-        cancelText: "继续完成",
-        confirmText: "现在提交",
-        success(res) {
-          if (res.confirm) {
-            wx.redirectTo({
-              url: '/ch-course/pages/mark/mark',
-            })
-          } else if (res.cancel) {
-            console.log('用户点击取消')
-          }
-        }
-      })
+      if (this.data.isAnalysis){
+        wx.$showToast('暂没更多题目');
+      }else {
+        this.submit();
+      }
       return;
     }
 
@@ -106,17 +107,39 @@ Page({
     }
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function() {
+  onShow(){
 
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
+  // 提交事件
+  submit(){
+    console.log(this.data.questionList)
+    let { questionList } =  this.data;
 
-  },
+    // 先判断用户是否有未回完题目
+    let res = questionList.some( item =>  !item.notFinished );
+
+    // 判断用户答案是否正确
+    questionList.forEach( item => {
+      
+    })
+
+    wx.showModal({
+      title: '提示',
+      content: '你还有题目没有完成，是否确认提交？',
+      cancelText: "继续完成",
+      confirmText: "现在提交",
+      success(res) {
+        if (res.confirm) {
+         
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+
+    // wx.redirectTo({
+    //   url: '/ch-course/pages/mark/mark',
+    // })
+  }
 })

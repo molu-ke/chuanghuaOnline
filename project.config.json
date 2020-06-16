@@ -76,6 +76,12 @@
 					"pathName": "ch-course/pages/mark/mark",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ch-course/pages/subject/subject",
+					"pathName": "ch-course/pages/subject/subject",
+					"scene": null
 				}
 			]
 		}

@@ -576,9 +576,9 @@ exports.testList = {
       originalPrice:'120',
       highlightLabel: "高新技能,专业知识,社会认可,启发思维,快速提升高新技能,专业知识,社会认可,启发思维,快速提升",
       id: "1252432486881878018",
-      pic: "https://xixiprod.oss-cn-shenzhen.aliyuncs.com/skill/image/7ef9d524-02b7-4bf2-8023-11fac6aab758.png",
+      pic: "https://xixiprod.oss-cn-shenzhen.aliyuncs.com/skill/image/ae82a6f4-1dee-4873-a7a5-c11b587a3859.png",
       skillClassifyId: 52,
-      skillName: "2020内科规培医生春季测试",
+      skillName: "中级会计职称测试",
       sortNo: 0,
       techType: 1,
       techTypeName: "现场授课"
@@ -631,7 +631,25 @@ exports.details = {
 }
 
 // 已购买课程
-exports.buyCourse = [ ];
+exports.buyCourse = [ 
+  {
+    id: "1252982486881878018",
+    cost:true,
+    applyCount: "3",
+    clickCount: "18",
+    consultCount: "1",
+    time:'20200301-20200530',
+    discountPrice:'120',
+    originalPrice:'120',
+    highlightLabel: "晋升必备,热门技能,专业性强",
+    pic: "https://xixiprod.oss-cn-shenzhen.aliyuncs.com/skill/image/7ef9d524-02b7-4bf2-8023-11fac6aab758.png",
+    skillClassifyId: 52,
+    skillName: "执业药师—面授无忧班",
+    sortNo: 0,
+    techType: 1,
+    techTypeName: "网络+现场授课"
+  },
+];
 
 // 已完成测试
 exports.finishTest = [];

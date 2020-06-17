@@ -47,7 +47,7 @@
 				<view class="courseware-content-title">{{unitItme.subTitle}}</view>
 				<view class="courseware-content-list flex-cs {{listItem.current && 'current' }}"  wx:key="subTitle"
               wx:for="{{unitItme.list}}" wx:for-item="listItem" wx:for-index="listIndex">
-					<view class="flex-c" bindtap="pageJump" data-url="/pages/videoPlay/videoPlay">
+					<view class="flex-c" bindtap="viewCourseEvent" data-item = "{{listItem}}">
 						<text class="ico">{{listItem.type}}</text>
 						<text>{{listItem.title}}</text>
 					</view>

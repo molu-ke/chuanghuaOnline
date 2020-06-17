@@ -22,8 +22,8 @@ Page({
   },
 
   screen(){
-    this.setData({
-      isActive:this.data.isActive==0?1:0
+    wx.navigateTo({
+      url: "/pages/select/select",
     })
   },
 

@@ -1,0 +1,1 @@
+  <xy-select bindhandleSelect="screen" isActive="{{isActive}}"/>

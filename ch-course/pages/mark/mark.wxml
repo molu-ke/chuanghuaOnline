@@ -15,7 +15,7 @@
 </view>
 
 <view class="subject">
-  <view class="subject-list flex-c" wx:for="{{list}}" :key="index">
+  <view class="subject-list flex-c" wx:for="{{list}}" wx:key="key">
     <image wx:if="{{!item.result}}" src="/ch-course/assets/images/wrong-ico.png"></image>
     <image wx:else src="/ch-course/assets/images/yes-ico.png"></image>
     <text>{{item.serialNumber}}、{{item.title}}</text>

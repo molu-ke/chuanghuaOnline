@@ -40,6 +40,10 @@ Page({
     this.setData({
       details:data
     })
+
+    wx.setNavigationBarTitle({
+      title: data.skillName,
+    })
   },
 
   switchTab(e){

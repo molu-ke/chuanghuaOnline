@@ -1,9 +1,9 @@
 <view class='banner'>
-	<image class="banner-bg" src="http://sims-dev.oss-cn-shenzhen.aliyuncs.com/topic/25b0501a-5237-4f12-80ed-3c2816418c7f-topic.jpg" mode="widthFix"></image>
+	<image class="banner-bg" src="{{details.pic}}" mode="widthFix"></image>
 </view>
 
 <view class="content">
-	<view class="content-title">越秀区2020春秀评测</view>
+	<view class="content-title">{{details.skillName}}</view>
 	<view class="content-title content-explain">对本次培训的综合测试</view>
 	<view class="content-subject">
 		<view>
@@ -16,7 +16,7 @@
 		</view>
 		<view>
 			<text>截止时间</text>
-			<text>2020-83-01  23:30</text>
+			<text>2020-03-01  23:30</text>
 		</view>
 	</view>
 	<view class="content-tips">截止提交后可以进入查看答案和解析</view>

@@ -1,5 +1,5 @@
 
-  <xy-select bindhandleSelect="screen" isActive="{{isActive}}"/>
+<xy-select bindhandleSelect="screen" isActive="{{isActive}}"/>
 
    <xy-title text="我的测试" placeholder="">
     <image class='screen' bindtap="screen" src='/assets/images/common/screen.png'></image>

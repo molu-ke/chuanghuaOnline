@@ -133,7 +133,7 @@ Page({
       if(item.type == 1){
         item.result = item.answer === item.userAnswer
       } else {
-        item.result = item.answer.join('') === item.userAnswer.join('')
+        item.userAnswer &&  (item.result = item.answer.join('') === item.userAnswer.join(''))
       }
       item.result && (total+=item.number)
       

@@ -169,6 +169,39 @@ Page({
     })
   },
 
+  //观看课程跳转
+  viewCourseEvent(e){
+    console.log(e)
+    let { item } = e.currentTarget.dataset;
+
+    if(item.type == "视频"){
+      wx.navigateTo({
+        url:"/pages/videoPlay/videoPlay",
+      })
+    } else {
+      wx.showLoading({
+        mask: true
+      })
+      wx.downloadFile({
+        url: 'https://sims-dev.oss-cn-shenzhen.aliyuncs.com/image/3291c347-2491-4e4a-a2cb-6a05d87f8c3c.pptx',
+        success: function (res) {
+          var filePath = res.tempFilePath
+          wx.openDocument({
+            filePath: filePath,
+            success: function (res) {
+              console.log('打开文档成功')
+            },
+            complete:function(){
+              wx.hideLoading();
+            }
+          })
+        },
+        fail:function(){
+          wx.hideLoading();
+        }
+      })
+    }
+  },
 
   /**
    * 用户点击右上角分享

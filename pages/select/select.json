@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "筛选",
+  "usingComponents": {
+    "xy-select": "/components/xy-select/index"
+  }
+}

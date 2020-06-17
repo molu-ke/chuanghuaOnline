@@ -1,6 +1,4 @@
 
-  <xy-select bindhandleSelect="screen" isActive="{{isActive}}"/>
-
    <xy-title text="我的培训" placeholder="">
     <image class='screen' bindtap="screen" src='/assets/images/common/screen.png'></image>
    </xy-title>

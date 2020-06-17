@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "熹熹人才",
   "usingComponents": {
     "xy-tab": "/components/xy-tab/index",
     "xy-title": "/components/xy-title/index",

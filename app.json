@@ -4,7 +4,8 @@
     "pages/course/course",
     "pages/myTest/myTest",
     "pages/my/my",
-    "pages/videoPlay/videoPlay"
+    "pages/videoPlay/videoPlay",
+    "pages/select/select"
   ],
   "subPackages": [
     {
@@ -58,7 +59,15 @@
     "pages/index/index": {
       "network": "all",
       "packages": [
-        "ch-login"
+        "ch-course",
+        "ch-buy",
+        "ch-my"
+      ]
+    },
+    "pages/my/my": {
+      "network": "all",
+      "packages": [
+        "ch-my"
       ]
     }
   },

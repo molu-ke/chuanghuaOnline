@@ -58,13 +58,6 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "ch-login/pages/login/login",
-					"pathName": "ch-login/pages/login/login",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
 					"name": "ch-course/pages/subject/subject",
 					"pathName": "ch-course/pages/subject/subject",
 					"query": "",
@@ -72,15 +65,9 @@
 				},
 				{
 					"id": -1,
-					"name": "ch-course/pages/mark/mark",
-					"pathName": "ch-course/pages/mark/mark",
+					"name": "ch-course/pages/details/details",
+					"pathName": "ch-course/pages/details/details",
 					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ch-course/pages/subject/subject",
-					"pathName": "ch-course/pages/subject/subject",
 					"scene": null
 				}
 			]

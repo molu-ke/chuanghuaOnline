@@ -58,15 +58,8 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "ch-course/pages/subject/subject",
-					"pathName": "ch-course/pages/subject/subject",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "ch-course/pages/details/details",
-					"pathName": "ch-course/pages/details/details",
+					"name": "ch-login/pages/register/register",
+					"pathName": "ch-login/pages/register/register",
 					"query": "",
 					"scene": null
 				}

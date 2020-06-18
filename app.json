@@ -88,8 +88,8 @@
       {
         "pagePath": "pages/myTest/myTest",
         "text": "我的测试",
-        "iconPath": "/assets/images/course-on.png",
-        "selectedIconPath": "/assets/images/course-off.png"
+        "iconPath": "/assets/images/test-on.png",
+        "selectedIconPath": "/assets/images/test-off.png"
       },
       {
         "pagePath": "pages/my/my",

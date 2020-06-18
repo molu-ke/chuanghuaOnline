@@ -91,6 +91,10 @@ Component({
         icon: {
             type: String,
             value: ''
+        },
+        required:{
+            type:Boolean,
+            value:false
         }
     },
     data: {

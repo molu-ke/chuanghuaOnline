@@ -7,14 +7,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    select:0,
-    idCard:'',
-    name:'',
-    phone:"",
-    code:"",
-    password:"",
-    isOk:false,
-    showPassword:false,
+    form:{
+      phone:'',
+      code:"",
+      password:'',
+      definePass:"",
+      bindWx:false,
+      referee:'',
+      isOk:false, // 用户协议勾选状态
+      showPassword:false,
+    },
+    wxAuthMsg:{}, // 微信授权信息
+    
+
+
+    select:0,    
     dowmNum: 0, // 倒计时
     msgBtnState: false, // 短信验证码按钮状态
     timerFn: null, // 计时器
@@ -32,27 +39,29 @@ Page({
     showDialog: false,
     isClick: false,      //按钮状态  false：未点击  true ：已点击
   },
-  /**
- * 生命周期函数--监听页面显示
- */
-  onShow: function () {
+
+  onShow() {
     // 检查之前的倒计时是否已结束，未结束则继续倒计
-    let obj = getStore('registerDownCount');
-    if (!obj) return;
-    let count = obj.counter - parseInt(new Date().getTime() / 1000 - obj.time / 1000)
-    if (count > 0) {
-      this.setData({
-        msgBtnState: true,
-        dowmNum: count
-      })
-      clearInterval(this.data.timerFn)
-      this.countDown();
-    }
+    // let obj = getStore('registerDownCount');
+    // if (!obj) return;
+    // let count = obj.counter - parseInt(new Date().getTime() / 1000 - obj.time / 1000)
+    // if (count > 0) {
+    //   this.setData({
+    //     msgBtnState: true,
+    //     dowmNum: count
+    //   })
+    //   clearInterval(this.data.timerFn)
+    //   this.countDown();
+    // }
   },
-  /**
- * 生命周期函数--监听页面卸载
- */
-  onUnload: function () {
+
+
+  inputEvent(e){
+
+  },
+
+
+  onUnload() {
     let obj = {
       counter: this.data.dowmNum,
       time: new Date().getTime()

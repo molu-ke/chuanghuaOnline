@@ -38,6 +38,10 @@
   margin-bottom: 20rpx;
 }
 
+.form-item__label-required{
+  color:#f13939;
+}
+
 .form-item__wrap--disabled {
   opacity: 0.3;
 }

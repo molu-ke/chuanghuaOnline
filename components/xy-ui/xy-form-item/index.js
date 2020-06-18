@@ -33,6 +33,10 @@ Component({
             observer(_statusMessage = '输入有误，请检查后重试') {
                 this.setData({ _statusMessage });
             }
+        },
+        required:{
+            type:Boolean,
+            value:false
         }
     },
     data: {

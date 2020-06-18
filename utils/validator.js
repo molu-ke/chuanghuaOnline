@@ -69,22 +69,6 @@ class BaseVail {
       return msg;
     }
 
-    /**
-     * @desc qq号校验
-     * @param {String|Number} qq
-     * @returns {string} 不通过返回提示信息  通过返回空字符串''
-    */
-    this.qq = qq => {
-      let pattern = /^[1-9]\d{4,9}$/;
-      let msg = '';
-      if (qq === '') {
-        msg = "qq号不能为空";
-      } else if (!pattern.test(qq)) {
-        msg = "qq号不正确";
-      }
-      return msg;
-    }
-
 
     /**
      * @desc  判断是否为身份证号
@@ -123,15 +107,14 @@ class BaseVail {
      * @return {String} 不通过返回提示信息  通过返回空字符串''
      */
     this.isNull = isNull => {
-      let res = isNull.find(item => item.content === '' || item.content.length == 0)
+      let res = isNull.find(item => item.content == '' || item.content.length == 0)
+      console.log(res)
       return res ? res.hint : ''
     }
   }
   // 调用各方法，都通过的返回 ''  不通过的返回提示文字
   checkListBy() {
     for (let item in this.value) {
-      // console.log(typeof(item))
-      //  if(item != 'isNull') return
       let resture = this[item](this.value[item]);
       if (resture != '') return resture;
     }
@@ -153,7 +136,7 @@ class FromChekck extends BaseVail {
     }
   }
 }
-
+// eg:
 // let baseVail = new FromChekck(parms);
 // let result = baseVail.checkListBy();
 // if (result) {

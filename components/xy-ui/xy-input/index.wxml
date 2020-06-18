@@ -1,5 +1,5 @@
 <!--pages/g-input/index.wxml-->
-<xy-form-item label="{{label}}" disabled="{{disabled}}" status="{{_status}}" statusMessage="{{_statusMessage}}">
+<xy-form-item label="{{label}}" disabled="{{disabled}}" status="{{_status}}" statusMessage="{{_statusMessage}}" required="{{required}}">
   <view class="input__container">
     <view class="input__prepend" wx:if="{{prepend}}">
       <slot name="prepend" class="slot"/>

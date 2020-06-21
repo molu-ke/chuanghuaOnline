@@ -25,14 +25,27 @@ class BaseVail {
      * @return {string} 不通过返回提示信息  通过返回空字符串''
      */
     this.password = password => {
-      let regPsd = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[~!@#$%^&_*])[\da-zA-Z~!@#$%^&_*]{8,16}$/;   //密码
+      let regPsd = /^(?=.*[a-zA-Z])(?=.*[0-9])[a-zA-Z0-9]{8,12}$/; //密码
       let msg = '';
       if (password === '') {
         msg = '请输入密码';
       } else if (password.length < 8 || password.length > 16) {
-        msg = '密码输入长度有误，请输入8-16位数字、字母以及特殊字符'
+        msg = '密码输入长度有误，请输入8-16位数字、字母'
       } else if (!regPsd.test(password)) {
-        msg = '密码输入有误，必须包含数字、字母以及特殊字符';
+        msg = '密码输入有误，必须包含数字、字母';
+      }
+      return msg;
+    }
+
+    /**
+     * @desc 比较数据是否一样
+     * @param {Array} identical
+     * @return {string} 不通过返回提示信息  通过返回空字符串''
+     */
+    this.isEqual = identical => {
+      let msg = '';
+      if( identical[0] != identical[1] ){
+        msg = '两次密码不一样，请检查'
       }
       return msg;
     }
@@ -108,7 +121,6 @@ class BaseVail {
      */
     this.isNull = isNull => {
       let res = isNull.find(item => item.content == '' || item.content.length == 0)
-      console.log(res)
       return res ? res.hint : ''
     }
   }

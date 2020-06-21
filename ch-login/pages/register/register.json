@@ -4,6 +4,7 @@
     "xy-input": "/components/xy-ui/xy-input/index",
     "xy-button-group": "/components/xy-ui/xy-button-group/index",
     "xy-form-item": "/components/xy-ui/xy-form-item/index",
-    "xy-icon": "/components/xy-ui/xy-icon/index"
+    "xy-icon": "/components/xy-ui/xy-icon/index",
+    "xy-sendCode": "/components/xy-sendCode/index"
   }
 }

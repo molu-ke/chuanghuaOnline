@@ -1,0 +1,1 @@
+<text class="{{component-class || 'defaultStyle' }}" bindtap="sendCodeEvent">{{written}}</text>

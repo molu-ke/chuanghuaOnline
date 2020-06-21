@@ -5,14 +5,13 @@
  <xy-input id="code" label="验证码" value="{{code}}"  bind:change="inputEvent" 
       placeholder="请输入验证码"  append type='digit' required="true">
     <view slot="append" class='append'>
-      <text wx:if="{{ !msgBtnState }}" bindtap="getMsg" class="msg-btn">发送验证码</text>
-      <text wx:else class="msg-btn">已发送{{dowmNum}}s</text>
+      <xy-sendCode phone="{{form.phone}}"></xy-sendCode>
     </view>
   </xy-input>
 
-<xy-input id="password" password="{{form.showPassword}}" placeholder="请输入登录密码" 
+<xy-input id="password" password="{{!form.showPassword}}" placeholder="请输入登录密码" 
           label="设置密码" required="true" bind:change="inputEvent" append>
-   <view slot="append" class='append psd_append' bindtap="changePassword">
+   <view slot="append" class='append psd_append' bindtap="isPasswordEvent">
         <image src='{{form.showPassword?"/ch-login/assets/images/psd-on.png":"/ch-login/assets/images/psd-off.png"}}'></image>
       </view>
 </xy-input>
@@ -23,14 +22,14 @@
 
 <xy-form-item id="bindWx" label="绑定微信" disabled="{{false}}">
    <view class='label flex-cc' >
-    <view class='flex-cc select-wrapper' data-id='1' bindtap='radioChange'>
+    <view class='flex-cc select-wrapper' data-id='1' bindtap='authEvent'>
         <view class='radio flex-cc  {{ form.bindWx &&"select"}}'>
           <text class='circle'></text>
         </view>
         <view>是</view>
     </view>
-    <view class='flex-cc select-wrapper' data-id='0' bindtap='radioChange'>
-        <view class='radio flex-cc {{form.bindWx &&"select"}}' >
+    <view class='flex-cc select-wrapper' data-id='0' bindtap='authEvent'>
+        <view class='radio flex-cc {{ !form.bindWx &&"select"}}' >
           <text class='circle'></text>
         </view>
         <view>否</view>
@@ -40,18 +39,18 @@
 <view class='tips'>强烈推荐绑定微信，绑定可享受更多便利服务</view>
 
 
-<xy-input id="referee" placeholder="请输入推荐人账号" label="推荐人" bind:change="inputEvent" append>
-    <view slot="append" class='append scan_append' bindtap="changePassword">
+<xy-input id="referee" value="{{form.referee}}" placeholder="请输入推荐人账号" label="推荐人" bind:change="inputEvent" append>
+    <view slot="append" class='append scan_append' bindtap="scanCodeEvent">
         <image src='/ch-login/assets/images/scan.png'></image>
       </view>
 </xy-input>
 
 <view class='tips'>请输入推荐人帐户或通过扫推荐人个人二维码获取推荐人账户</view>
 
- <view class="xy-Rule">
-    <xy-icon type="{{form.isOK?'confirm':'cancel'}}"  bindtap="select"/>
+ <view class="xy-Rule flex-c">
+    <xy-icon type="{{form.isOK?'confirm':'cancel'}}"  bindtap="selectEvent"/>
     我同意<navigator url="/ch-login/pages/userProtocol/index">《用户协议》</navigator>
   </view>
 
-  <xy-button-group  primaryText="注册"   bindprimaryTap='register'/>
+  <xy-button-group  primaryText="注册"   bindprimaryTap='registerEvent'/>
 

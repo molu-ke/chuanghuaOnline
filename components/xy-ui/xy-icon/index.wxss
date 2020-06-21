@@ -129,7 +129,7 @@
 .g-icon-cancel{
   width: 30rpx;
   height: 30rpx;
-  margin:33rpx 10rpx 0rpx 40rpx;
+  margin:30rpx 10rpx 0rpx 40rpx;
   position: relative;
 }
 .g-icon-cancel:before {

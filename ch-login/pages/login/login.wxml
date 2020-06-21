@@ -34,8 +34,10 @@
 
 <view class='thirdLogin'>
 	<view class="thirdLogin-write">第三方登录方式</view>
-	<view class='thirdLogin-content' bindtap="wechatLogin">
-		<image src='/ch-login/assets/images/weChat.png'></image>
-		<view>微信</view>
+	<view class='thirdLogin-content'>
+		<button open-type="getUserInfo" bindgetuserinfo="wxLoginEvent" plain class='buttonStyle--clear'>
+			<image src='/ch-login/assets/images/weChat.png'></image>
+			<view>微信</view>
+		</button>
 	</view>
 </view>

@@ -1,5 +1,4 @@
 const common = require('../../../utils/common');
-const {BaseVail} = require('../../../utils/validator');
 
 Page({
 
@@ -48,7 +47,8 @@ Page({
     wx.navigateTo({ url:e.currentTarget.dataset.url })
   },
 
-  loginEvent(){
+  // 登录
+  async loginEvent(){
 
     let form = this.data.form;
 
@@ -61,12 +61,7 @@ Page({
       ]
     }
 
-    let baseVail = new BaseVail(validator);
-    let result = baseVail.checkListBy();
-    // if (result) {
-    //   wx.$showToast(result)
-    //   return;
-    // }
+    // await common.testValidator(validator);
 
     wx.$setStore('user',true)
     wx.switchTab({
@@ -74,6 +69,18 @@ Page({
     })
   },
   
+  // 微信登录
+  async wxLoginEvent(e){
+    
+    if(e.detail.errMsg !== 'getUserInfo:ok') return;
+  
+    console.log(e.detail);
+
+    wx.navigateTo({
+      url: '/ch-login/pages/bindWechat/bindWechat',
+    })
+  },
+
   onShareAppMessage() {
 
   }

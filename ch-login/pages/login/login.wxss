@@ -75,3 +75,18 @@
   padding:15rpx;
   box-sizing: border-box;
 }
+
+.buttonStyle--clear {
+  display: inline-block;
+  margin:0;
+  padding:0;
+  text-align: center;
+  line-height:normal;
+  font-size: 32rpx;
+  color: #000;
+  background-color:#fff;
+  border-radius: 0;
+}
+.buttonStyle--clear[plain]{
+  border:0 solid #353535;
+}
